@@ -1,11 +1,29 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Code2, Zap, Shield } from "lucide-react";
+import { ArrowRight, Code2, Zap, Shield, FolderKanban } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function Home() {
+  const projects = [
+    {
+      title: "E-Commerce Platform",
+      description: "A scalable online store with real-time inventory management.",
+      tags: ["Next.js", "Supabase", "Stripe"]
+    },
+    {
+      title: "Analytics Dashboard",
+      description: "Interactive data visualization for business intelligence.",
+      tags: ["React", "D3.js", "TypeScript"]
+    },
+    {
+      title: "Content Management",
+      description: "Headless CMS with customizable workflows and publishing.",
+      tags: ["GraphQL", "Next.js", "Tailwind"]
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Navigation */}
@@ -54,15 +72,12 @@ export default function Home() {
               Empower your development workflow with cutting-edge tools and frameworks.
               Build scalable applications faster than ever before.
             </p>
-            <div className="flex justify-center gap-4">
+            <div className="flex justify-center">
               <Link href="/get-started">
                 <Button size="lg" className="gap-2">
                   Get Started <ArrowRight className="w-4 h-4" />
                 </Button>
               </Link>
-              <Button size="lg" variant="outline">
-                Live Demo
-              </Button>
             </div>
           </motion.div>
         </div>
@@ -110,6 +125,48 @@ export default function Home() {
                 Enterprise-grade security with built-in protection and best practices.
               </p>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Explore what you can build with KaliDev's powerful development platform
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="bg-blue-100 p-3 rounded-lg w-fit mb-4 text-blue-600">
+                  <FolderKanban className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                <p className="text-gray-600 mb-4">{project.description}</p>
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag, i) => (
+                    <span key={i} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

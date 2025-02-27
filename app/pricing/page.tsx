@@ -8,20 +8,25 @@ import Link from "next/link";
 export default function Pricing() {
   const plans = [
     {
-      name: "Starter",
-      price: "$0",
+      name: "Landing Page",
+      price: "$42",
       description: "Perfect for side projects and experiments",
       features: [
-        "Up to 3 projects",
-        "1GB storage",
-        "Community support",
-        "Basic analytics",
-        "Deploy to single region"
+"Modern & Responsive Design",
+"On-Page SEO Optimisation",
+"Contact Form & WhatsApp",
+"Google Analytics Integration",
+"Social Media Integration",
+"SSL Security (HTTPS)",
+"Speed Optimisation",
+"Free .com Domain",
+"Free 1 Year Hosting",
+"3x Revision",
       ]
     },
     {
       name: "Pro",
-      price: "$29",
+      price: "$117",
       description: "For professional developers and small teams",
       features: [
         "Unlimited projects",
