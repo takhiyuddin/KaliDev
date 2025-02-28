@@ -10,22 +10,39 @@ export default function Documentation() {
     {
       title: "Getting Started",
       icon: <Book className="w-6 h-6" />,
-      items: ["Quick Start Guide", "Installation", "Basic Concepts"]
+      items: [
+        { name: "Quick Start Guide", path: "/documentation/getting-started" },
+        { name: "Installation", path: "/documentation/getting-started" },
+        { name: "Basic Concepts", path: "/documentation/getting-started" }
+      ]
     },
     {
       title: "Core Features",
       icon: <Code className="w-6 h-6" />,
-      items: ["Authentication", "Database", "File Storage", "API Reference"]
+      items: [
+        { name: "Authentication", path: "/documentation/core-features" },
+        { name: "Database", path: "/documentation/core-features" },
+        { name: "File Storage", path: "/documentation/core-features" },
+        { name: "API Reference", path: "/documentation/core-features" }
+      ]
     },
     {
       title: "Tutorials",
       icon: <Terminal className="w-6 h-6" />,
-      items: ["Building Your First App", "Deployment", "Best Practices"]
+      items: [
+        { name: "Building Your First App", path: "/documentation/tutorials" },
+        { name: "Deployment", path: "/documentation/tutorials" },
+        { name: "Best Practices", path: "/documentation/tutorials" }
+      ]
     },
     {
       title: "Resources",
       icon: <FileText className="w-6 h-6" />,
-      items: ["Examples", "FAQ", "Troubleshooting"]
+      items: [
+        { name: "Examples", path: "/documentation/resources" },
+        { name: "FAQ", path: "/documentation/resources" },
+        { name: "Troubleshooting", path: "/documentation/resources" }
+      ]
     }
   ];
 
@@ -67,9 +84,11 @@ export default function Documentation() {
               <ul className="space-y-3">
                 {section.items.map((item, i) => (
                   <li key={i}>
-                    <Button variant="ghost" className="w-full justify-start text-gray-700 hover:text-blue-600">
-                      {item}
-                    </Button>
+                    <Link href={item.path}>
+                      <Button variant="ghost" className="w-full justify-start text-gray-700 hover:text-blue-600">
+                        {item.name}
+                      </Button>
+                    </Link>
                   </li>
                 ))}
               </ul>
