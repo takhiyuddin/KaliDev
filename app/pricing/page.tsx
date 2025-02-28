@@ -221,7 +221,8 @@ Notes: ${formData.notes || "None"}
                     <p className="text-sm text-gray-500">Revision:</p>
                     <p className="font-medium">
                       {plans[selectedPlan].name === "Enterprise" ? "Unlimited" : 
-                       plans[selectedPlan].name === "Pro" ? "5x" : "3x"}
+                       plans[selectedPlan].name === "Pro" ? "5x" : "Unlimited"}
+
                     </p>
                   </div>
                 </div>
