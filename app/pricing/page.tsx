@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Pricing() {
-  const [selectedPlan, setSelectedPlan] = useState(null);
+  const [selectedPlan, setSelectedPlan] = useState<number | null>(null);
   const [formData, setFormData] = useState({
     fullName: "",
     whatsapp: "",
@@ -16,7 +16,7 @@ export default function Pricing() {
     notes: ""
   });
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -24,9 +24,14 @@ export default function Pricing() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // In a real application, this would send the data to WhatsApp or a backend
+
+    if (selectedPlan === null) {
+      alert("Please select a plan before submitting.");
+      return;
+    }
+
     const message = `
 *New Order Request*
 Package: ${plans[selectedPlan].name}
@@ -39,10 +44,8 @@ Business: ${formData.businessName}
 Business Type: ${formData.businessType}
 Notes: ${formData.notes || "None"}
 `;
-    
-    // Encode the message for WhatsApp URL
+
     const encodedMessage = encodeURIComponent(message);
-    // Replace with your actual WhatsApp number
     window.open(`https://wa.me/628953240735?text=${encodedMessage}`, '_blank');
   };
 
