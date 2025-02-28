@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Code2, Zap, Shield, FolderKanban } from "lucide-react";
+import { ArrowRight, Code2, FolderKanban, BarChart, MessageSquare, Smartphone, Globe, Database, Server, Headphones, Wrench, Palette, Shield, Cloud, LineChart, Zap, Laptop } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -21,6 +21,84 @@ export default function Home() {
       title: "Content Management",
       description: "Headless CMS with customizable workflows and publishing.",
       tags: ["GraphQL", "Next.js", "Tailwind"]
+    },
+    {
+      title: "AI-Powered Chatbot",
+      description: "Intelligent customer support with natural language processing.",
+      tags: ["Python", "TensorFlow", "WebSockets"]
+    },
+    {
+      title: "Mobile App Suite",
+      description: "Cross-platform mobile applications with shared codebase.",
+      tags: ["React Native", "Firebase", "Redux"]
+    },
+    {
+      title: "Enterprise Portal",
+      description: "Secure internal tools for team collaboration and resource management.",
+      tags: ["Vue.js", "Node.js", "PostgreSQL"]
+    }
+  ];
+
+  const services = [
+    {
+      icon: <Server className="w-12 h-12 text-blue-600 mb-4" />,
+      title: "Web Development",
+      description: "Custom websites and web applications built with modern frameworks and best practices."
+    },
+    {
+      icon: <Smartphone className="w-12 h-12 text-blue-600 mb-4" />,
+      title: "Mobile Development",
+      description: "Native and cross-platform mobile apps for iOS and Android devices."
+    },
+    {
+      icon: <Palette className="w-12 h-12 text-blue-600 mb-4" />,
+      title: "UI/UX Design",
+      description: "Beautiful, intuitive interfaces designed for optimal user experience and engagement."
+    },
+    {
+      icon: <Database className="w-12 h-12 text-blue-600 mb-4" />,
+      title: "Database Solutions",
+      description: "Scalable database architecture with optimized performance and security."
+    },
+    {
+      icon: <Cloud className="w-12 h-12 text-blue-600 mb-4" />,
+      title: "Cloud Services",
+      description: "Deployment and management of applications on leading cloud platforms."
+    },
+    {
+      icon: <Shield className="w-12 h-12 text-blue-600 mb-4" />,
+      title: "Security Audits",
+      description: "Comprehensive security assessments to identify and address vulnerabilities."
+    },
+    {
+      icon: <LineChart className="w-12 h-12 text-blue-600 mb-4" />,
+      title: "Performance Optimization",
+      description: "Enhance application speed and efficiency through advanced optimization techniques."
+    },
+    {
+      icon: <Headphones className="w-12 h-12 text-blue-600 mb-4" />,
+      title: "Technical Support",
+      description: "24/7 expert assistance and maintenance for all your digital products."
+    },
+    {
+      icon: <Zap className="w-12 h-12 text-blue-600 mb-4" />,
+      title: "API Development",
+      description: "Custom API solutions for seamless integration between systems and services."
+    },
+    {
+      icon: <Laptop className="w-12 h-12 text-blue-600 mb-4" />,
+      title: "DevOps Services",
+      description: "Streamlined development operations with CI/CD pipelines and infrastructure automation."
+    },
+    {
+      icon: <Code2 className="w-12 h-12 text-blue-600 mb-4" />,
+      title: "Custom Software",
+      description: "Bespoke software solutions tailored to your specific business requirements."
+    },
+    {
+      icon: <Wrench className="w-12 h-12 text-blue-600 mb-4" />,
+      title: "Maintenance & Updates",
+      description: "Ongoing support, updates, and improvements to keep your applications running smoothly."
     }
   ];
 
@@ -37,9 +115,6 @@ export default function Home() {
             </div>
             <div className="hidden md:block">
               <div className="flex items-center space-x-4">
-                <Link href="/features">
-                  <Button variant="ghost">Features</Button>
-                </Link>
                 <Link href="/pricing">
                   <Button variant="ghost">Pricing</Button>
                 </Link>
@@ -83,48 +158,37 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="p-6 rounded-2xl bg-gray-50 border"
-            >
-              <Zap className="w-12 h-12 text-blue-600 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Lightning Fast</h3>
-              <p className="text-gray-600">
-                Optimized performance with blazing fast load times and smooth interactions.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="p-6 rounded-2xl bg-gray-50 border"
-            >
-              <Code2 className="w-12 h-12 text-blue-600 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Modern Stack</h3>
-              <p className="text-gray-600">
-                Built with the latest technologies including Next.js, React, and Tailwind CSS.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="p-6 rounded-2xl bg-gray-50 border"
-            >
-              <Shield className="w-12 h-12 text-blue-600 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Secure by Default</h3>
-              <p className="text-gray-600">
-                Enterprise-grade security with built-in protection and best practices.
-              </p>
-            </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive development solutions to bring your ideas to life
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="p-6 rounded-2xl bg-gray-50 border hover:shadow-md transition-shadow"
+              >
+                {service.icon}
+                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                <p className="text-gray-600">
+                  {service.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -138,7 +202,7 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Portfolio Projects</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Explore what you can build with KaliDev's powerful development platform
             </p>
@@ -154,7 +218,12 @@ export default function Home() {
                 className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="bg-blue-100 p-3 rounded-lg w-fit mb-4 text-blue-600">
-                  <FolderKanban className="w-6 h-6" />
+                  {index === 0 ? <Globe className="w-6 h-6" /> : 
+                   index === 1 ? <BarChart className="w-6 h-6" /> : 
+                   index === 2 ? <FolderKanban className="w-6 h-6" /> :
+                   index === 3 ? <MessageSquare className="w-6 h-6" /> :
+                   index === 4 ? <Smartphone className="w-6 h-6" /> :
+                   <Database className="w-6 h-6" />}
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                 <p className="text-gray-600 mb-4">{project.description}</p>
