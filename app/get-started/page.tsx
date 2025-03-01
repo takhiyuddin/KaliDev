@@ -92,9 +92,9 @@ export default function GetStarted() {
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Location</h3>
                   <p className="text-gray-600">
-                    Jl. Slamet Riyadi No. 123<br />
-                    Surakarta, Central Java<br />
-                    Indonesia 57131
+                    Jalan Raya Randusari-Klaten KM 0.4<br />
+                    Cemoro 07/02, Dusun III, Randusari<br />
+                    Boyolali, Central Java 57372
                   </p>
                 </div>
               </div>
@@ -159,11 +159,16 @@ export default function GetStarted() {
 
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <h3 className="text-lg font-semibold mb-4">Our Location</h3>
-              <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden">
-                {/* This is a placeholder for a map. In a real application, you would embed a Google Maps iframe or similar */}
-                <div className="w-full h-full flex items-center justify-center bg-blue-50 text-blue-600">
-                  <MapPin className="w-8 h-8" />
-                </div>
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d247.20732537175337!2d110.6455220282078!3d-7.540342706547201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sJalan%20Raya%20Randusari-Klaten%20KM%200.4%2C%20Cemoro%2007%2F02%2C%20Dusun%20III%2C%20Randusari%2C%20Kec.%20Teras%2C%20Kabupaten%20Boyolali%2C%20Jawa%20Tengah%2057372!5e0!3m2!1sid!2sid!4v1740814117355!5m2!1sid!2sid"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </div>
           </div>
