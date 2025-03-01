@@ -158,8 +158,8 @@ export default function Home() {
                 <Link href="/documentation">
                   <Button variant="ghost">Documentation</Button>
                 </Link>
-                <Link href="/pricing">
-                  <Button>Get Started</Button>
+                <Link href="/get-started">
+                  <Button>Contact</Button>
                 </Link>
               </div>
             </div>
