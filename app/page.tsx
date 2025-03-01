@@ -1,11 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Code2, FolderKanban, BarChart, MessageSquare, Smartphone, Globe, Database, Server, Headphones, Wrench, Palette, Shield, Cloud, LineChart, Zap, Laptop } from "lucide-react";
+import { ArrowRight, Code2, FolderKanban, BarChart, MessageSquare, Smartphone, Globe, Database, Server, Headphones, Wrench, Palette, Shield, Cloud, LineChart, Zap, Laptop, FileText, Image, Video, Users, ShoppingCart, Layers, Cpu, BookOpen, Map, PieChart, Briefcase, Lightbulb, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   const projects = [
     {
       title: "E-Commerce Platform",
@@ -36,6 +43,36 @@ export default function Home() {
       title: "Enterprise Portal",
       description: "Secure internal tools for team collaboration and resource management.",
       tags: ["Vue.js", "Node.js", "PostgreSQL"]
+    },
+    {
+      title: "Healthcare Management System",
+      description: "Comprehensive platform for patient records and appointment scheduling.",
+      tags: ["Angular", "MongoDB", "Express"]
+    },
+    {
+      title: "Real Estate Marketplace",
+      description: "Property listing platform with advanced search and virtual tours.",
+      tags: ["React", "Node.js", "ElasticSearch"]
+    },
+    {
+      title: "Learning Management System",
+      description: "Educational platform with course creation and student progress tracking.",
+      tags: ["Next.js", "PostgreSQL", "WebRTC"]
+    },
+    {
+      title: "Fintech Payment Solution",
+      description: "Secure payment processing with multi-currency support and fraud detection.",
+      tags: ["Node.js", "Redis", "Docker"]
+    },
+    {
+      title: "Social Media Platform",
+      description: "Community-focused platform with real-time feeds and rich media sharing.",
+      tags: ["React", "GraphQL", "AWS"]
+    },
+    {
+      title: "IoT Control Dashboard",
+      description: "Centralized management system for connected devices and sensors.",
+      tags: ["Vue.js", "MQTT", "WebSockets"]
     }
   ];
 
@@ -126,8 +163,43 @@ export default function Home() {
                 </Link>
               </div>
             </div>
+            <div className="md:hidden">
+              <Button variant="ghost" size="icon" onClick={toggleMenu}>
+                <Menu className="h-6 w-6" />
+              </Button>
+            </div>
           </div>
         </div>
+
+        {/* Mobile menu */}
+        {isMenuOpen && (
+          <motion.div 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+            className="md:hidden bg-white border-b shadow-lg"
+          >
+            <div className="px-4 pt-2 pb-4 space-y-1 sm:px-6">
+              <div className="flex justify-end">
+                <Button variant="ghost" size="icon" onClick={toggleMenu}>
+                  <X className="h-6 w-6" />
+                </Button>
+              </div>
+              <div className="flex flex-col space-y-2">
+                <Link href="/pricing" onClick={() => setIsMenuOpen(false)}>
+                  <Button variant="ghost" className="w-full justify-start">Pricing</Button>
+                </Link>
+                <Link href="/documentation" onClick={() => setIsMenuOpen(false)}>
+                  <Button variant="ghost" className="w-full justify-start">Documentation</Button>
+                </Link>
+                <Link href="/get-started" onClick={() => setIsMenuOpen(false)}>
+                  <Button className="w-full justify-start">Get Started</Button>
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        )}
       </nav>
 
       {/* Hero Section */}
@@ -218,12 +290,18 @@ export default function Home() {
                 className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="bg-blue-100 p-3 rounded-lg w-fit mb-4 text-blue-600">
-                  {index === 0 ? <Globe className="w-6 h-6" /> : 
+                  {index === 0 ? <ShoppingCart className="w-6 h-6" /> : 
                    index === 1 ? <BarChart className="w-6 h-6" /> : 
-                   index === 2 ? <FolderKanban className="w-6 h-6" /> :
+                   index === 2 ? <FileText className="w-6 h-6" /> :
                    index === 3 ? <MessageSquare className="w-6 h-6" /> :
                    index === 4 ? <Smartphone className="w-6 h-6" /> :
-                   <Database className="w-6 h-6" />}
+                   index === 5 ? <Users className="w-6 h-6" /> :
+                   index === 6 ? <Briefcase className="w-6 h-6" /> :
+                   index === 7 ? <Map className="w-6 h-6" /> :
+                   index === 8 ? <BookOpen className="w-6 h-6" /> :
+                   index === 9 ? <PieChart className="w-6 h-6" /> :
+                   index === 10 ? <Layers className="w-6 h-6" /> :
+                   <Cpu className="w-6 h-6" />}
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                 <p className="text-gray-600 mb-4">{project.description}</p>
