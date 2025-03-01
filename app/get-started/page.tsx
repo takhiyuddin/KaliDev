@@ -161,7 +161,7 @@ export default function GetStarted() {
               <h3 className="text-lg font-semibold mb-4">Our Location</h3>
               <div className="aspect-video rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d247.20732537175337!2d110.6455220282078!3d-7.540342706547201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sJalan%20Raya%20Randusari-Klaten%20KM%200.4%2C%20Cemoro%2007%2F02%2C%20Dusun%20III%2C%20Randusari%2C%20Kec.%20Teras%2C%20Kabupaten%20Boyolali%2C%20Jawa%20Tengah%2057372!5e0!3m2!1sid!2sid!4v1740814117355!5m2!1sid!2sid"
+                  src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d247.20735042869893!2d110.64576946198937!3d-7.540298832794399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sJalan%20Raya%20Randusari-Klaten%20KM%200.4%2C%20Cemoro%2007%2F02%2C%20Dusun%20III%2C%20Randusari%2C%20Kec.%20Teras%2C%20Kabupaten%20Boyolali%2C%20Jawa%20Tengah%2057372!5e0!3m2!1sid!2sid!4v1740814568538!5m2!1sid!2sid"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
