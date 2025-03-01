@@ -46,7 +46,7 @@ Notes: ${formData.notes || "None"}
 `;
 
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/628953240735?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/62895324073524?text=${encodedMessage}`, '_blank');
   };
 
   const plans = [
