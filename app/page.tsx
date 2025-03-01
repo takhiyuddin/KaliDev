@@ -158,7 +158,7 @@ export default function Home() {
                 <Link href="/documentation">
                   <Button variant="ghost">Documentation</Button>
                 </Link>
-                <Link href="/get-started">
+                <Link href="/pricing">
                   <Button>Get Started</Button>
                 </Link>
               </div>
@@ -193,7 +193,7 @@ export default function Home() {
                 <Link href="/documentation" onClick={() => setIsMenuOpen(false)}>
                   <Button variant="ghost" className="w-full justify-start">Documentation</Button>
                 </Link>
-                <Link href="/get-started" onClick={() => setIsMenuOpen(false)}>
+                <Link href="/pricing" onClick={() => setIsMenuOpen(false)}>
                   <Button className="w-full justify-start">Get Started</Button>
                 </Link>
               </div>
@@ -220,7 +220,7 @@ export default function Home() {
               Build scalable applications faster than ever before.
             </p>
             <div className="flex justify-center">
-              <Link href="/get-started">
+              <Link href="/pricing">
                 <Button size="lg" className="gap-2">
                   Get Started <ArrowRight className="w-4 h-4" />
                 </Button>
@@ -333,7 +333,7 @@ export default function Home() {
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Join thousands of developers who are already building amazing products with our platform.
             </p>
-            <Link href="/get-started">
+            <Link href="/pricing">
               <Button size="lg" variant="secondary" className="gap-2">
                 Start Building <ArrowRight className="w-4 h-4" />
               </Button>
@@ -346,7 +346,7 @@ export default function Home() {
       <footer className="bg-gray-50 border-t py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center text-gray-600">
-            <p>© 2024 KaliDev. All rights reserved.</p>
+            <p>© 2025 KaliDev. All rights reserved.</p>
           </div>
         </div>
       </footer>
