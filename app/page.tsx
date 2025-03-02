@@ -194,7 +194,7 @@ export default function Home() {
                   <Button variant="ghost">Documentation</Button>
                 </Link>
                 <Link href="/get-started">
-                  <Button>Get Started</Button>
+                  <Button>Contact</Button>
                 </Link>
               </div>
             </div>
@@ -229,7 +229,7 @@ export default function Home() {
                   <Button variant="ghost" className="w-full justify-start">Documentation</Button>
                 </Link>
                 <Link href="/get-started" onClick={() => setIsMenuOpen(false)}>
-                  <Button className="w-full justify-start">Get Started</Button>
+                  <Button className="w-full justify-start">Contact</Button>
                 </Link>
               </div>
             </div>
@@ -255,7 +255,7 @@ export default function Home() {
               Build scalable applications faster than ever before.
             </p>
             <div className="flex justify-center">
-              <Link href="/get-started">
+              <Link href="/pricing">
                 <Button size="lg" className="gap-2">
                   Get Started <ArrowRight className="w-4 h-4" />
                 </Button>
@@ -423,7 +423,7 @@ export default function Home() {
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Join thousands of developers who are already building amazing products with our platform.
             </p>
-            <Link href="/get-started">
+            <Link href="/pricing">
               <Button size="lg" variant="secondary" className="gap-2">
                 Start Building <ArrowRight className="w-4 h-4" />
               </Button>
