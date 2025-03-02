@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Code2, FolderKanban, BarChart, MessageSquare, Smartphone, Globe, Database, Server, Headphones, Wrench, Palette, Shield, Cloud, LineChart, Zap, Laptop, FileText, Image, Video, Users, ShoppingCart, Layers, Cpu, BookOpen, Map, PieChart, Briefcase, Lightbulb, Menu, X } from "lucide-react";
+import { ArrowRight, Code2, FolderKanban, BarChart, MessageSquare, Smartphone, Globe, Database, Server, Headphones, Wrench, Palette, Shield, Cloud, LineChart, Zap, Laptop, FileText, Image, Video, Users, ShoppingCart, Layers, Cpu, BookOpen, Map, PieChart, Briefcase, Lightbulb, Menu, X, Star, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useState } from "react";
@@ -73,6 +73,41 @@ export default function Home() {
       title: "IoT Control Dashboard",
       description: "Centralized management system for connected devices and sensors.",
       tags: ["Vue.js", "MQTT", "WebSockets"]
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      position: "CTO, TechVision Inc.",
+      company: "TechVision Inc.",
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
+      quote: "KaliDev transformed our business with their e-commerce platform. The attention to detail and performance optimization exceeded our expectations. Our conversion rates have increased by 40% since launch.",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      position: "Founder, HealthPlus",
+      company: "HealthPlus",
+      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
+      quote: "The healthcare management system KaliDev built for us has revolutionized how we handle patient data. The platform is intuitive, secure, and has significantly improved our operational efficiency.",
+      rating: 5
+    },
+    {
+      name: "Emily Rodriguez",
+      position: "Marketing Director, EduLearn",
+      company: "EduLearn",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
+      quote: "Our learning management system has received outstanding feedback from both instructors and students. KaliDev delivered a product that was not only beautiful but also incredibly functional and user-friendly.",
+      rating: 5
+    },
+    {
+      name: "David Park",
+      position: "CEO, PropertyFinder",
+      company: "PropertyFinder",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
+      quote: "The real estate marketplace KaliDev developed for us has completely changed how we connect buyers with sellers. The virtual tour feature has been particularly impressive and has set us apart from competitors.",
+      rating: 4
     }
   ];
 
@@ -159,7 +194,7 @@ export default function Home() {
                   <Button variant="ghost">Documentation</Button>
                 </Link>
                 <Link href="/get-started">
-                  <Button>Contact</Button>
+                  <Button>Get Started</Button>
                 </Link>
               </div>
             </div>
@@ -193,7 +228,7 @@ export default function Home() {
                 <Link href="/documentation" onClick={() => setIsMenuOpen(false)}>
                   <Button variant="ghost" className="w-full justify-start">Documentation</Button>
                 </Link>
-                <Link href="/pricing" onClick={() => setIsMenuOpen(false)}>
+                <Link href="/get-started" onClick={() => setIsMenuOpen(false)}>
                   <Button className="w-full justify-start">Get Started</Button>
                 </Link>
               </div>
@@ -220,7 +255,7 @@ export default function Home() {
               Build scalable applications faster than ever before.
             </p>
             <div className="flex justify-center">
-              <Link href="/pricing">
+              <Link href="/get-started">
                 <Button size="lg" className="gap-2">
                   Get Started <ArrowRight className="w-4 h-4" />
                 </Button>
@@ -318,6 +353,61 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Client Testimonials</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Hear what our clients have to say about their experience working with us
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow relative"
+              >
+                <div className="absolute top-6 right-6 text-blue-500">
+                  <Quote className="w-10 h-10 opacity-20" />
+                </div>
+                <div className="flex items-start mb-6">
+                  <div className="mr-4">
+                    <img 
+                      src={testimonial.image} 
+                      alt={testimonial.name} 
+                      className="w-16 h-16 rounded-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold">{testimonial.name}</h3>
+                    <p className="text-gray-600">{testimonial.position}</p>
+                    <div className="flex mt-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star 
+                          key={i} 
+                          className={`w-4 h-4 ${i < testimonial.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} 
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <p className="text-gray-700 italic">"{testimonial.quote}"</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -333,7 +423,7 @@ export default function Home() {
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Join thousands of developers who are already building amazing products with our platform.
             </p>
-            <Link href="/pricing">
+            <Link href="/get-started">
               <Button size="lg" variant="secondary" className="gap-2">
                 Start Building <ArrowRight className="w-4 h-4" />
               </Button>
