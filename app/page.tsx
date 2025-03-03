@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Code2, FolderKanban, BarChart, MessageSquare, Smartphone, Globe, Database, Server, Headphones, Wrench, Palette, Shield, Cloud, LineChart, Zap, Laptop, FileText, Image, Video, Users, ShoppingCart, Layers, Cpu, BookOpen, Map, PieChart, Briefcase, Lightbulb, Menu, X, Star, Quote } from "lucide-react";
+import { ArrowRight, Code2, FolderKanban, BarChart, MessageSquare, Smartphone, Globe, Database, Server, Headphones, Wrench, Palette, Shield, Cloud, LineChart, Zap, Laptop, FileText, Image, Video, Users, ShoppingCart, Layers, Cpu, BookOpen, Map, PieChart, Briefcase, Lightbulb, Menu, X, Star, Quote, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Github, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useState } from "react";
@@ -172,6 +172,46 @@ export default function Home() {
       title: "Maintenance & Updates",
       description: "Ongoing support, updates, and improvements to keep your applications running smoothly."
     }
+  ];
+
+  const footerLinks = {
+    company: [
+      { name: "About Us", href: "#" },
+      { name: "Careers", href: "#" },
+      { name: "Our Team", href: "#" },
+      { name: "Press", href: "#" },
+      { name: "Partners", href: "#" }
+    ],
+    services: [
+      { name: "Web Development", href: "#" },
+      { name: "Mobile Development", href: "#" },
+      { name: "UI/UX Design", href: "#" },
+      { name: "Cloud Services", href: "#" },
+      { name: "API Development", href: "#" }
+    ],
+    resources: [
+      { name: "Documentation", href: "/documentation" },
+      { name: "Blog", href: "#" },
+      { name: "Case Studies", href: "#" },
+      { name: "Tutorials", href: "/documentation/tutorials" },
+      { name: "FAQs", href: "/documentation/resources" }
+    ],
+    legal: [
+      { name: "Privacy Policy", href: "#" },
+      { name: "Terms of Service", href: "#" },
+      { name: "Cookie Policy", href: "#" },
+      { name: "GDPR", href: "#" },
+      { name: "Accessibility", href: "#" }
+    ]
+  };
+
+  const socialLinks = [
+    { name: "Twitter", icon: <Twitter className="w-5 h-5" />, href: "https://twitter.com" },
+    { name: "Facebook", icon: <Facebook className="w-5 h-5" />, href: "https://facebook.com" },
+    { name: "LinkedIn", icon: <Linkedin className="w-5 h-5" />, href: "https://linkedin.com" },
+    { name: "GitHub", icon: <Github className="w-5 h-5" />, href: "https://github.com" },
+    { name: "YouTube", icon: <Youtube className="w-5 h-5" />, href: "https://youtube.com" },
+    { name: "Instagram", icon: <Instagram className="w-5 h-5" />, href: "https://instagram.com" }
   ];
 
   return (
@@ -433,10 +473,126 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-50 border-t py-12 px-4 sm:px-6 lg:px-8">
+      <footer className="bg-gray-900 text-white pt-16 pb-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center text-gray-600">
-            <p>© 2025 KaliDev. All rights reserved.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+            {/* Company Info */}
+            <div className="lg:col-span-2">
+              <div className="mb-6">
+                <Link href="/">
+                  <span className="text-2xl font-bold text-white">KaliDev</span>
+                </Link>
+              </div>
+              <p className="text-gray-400 mb-6 max-w-md">
+                Empowering developers and businesses with cutting-edge tools and solutions to build exceptional digital experiences.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <MapPin className="w-5 h-5 text-blue-400 mt-0.5 mr-3" />
+                  <span className="text-gray-300">
+                    123 Innovation Street<br />
+                    Tech District, San Francisco<br />
+                    CA 94103, USA
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <Phone className="w-5 h-5 text-blue-400 mr-3" />
+                  <span className="text-gray-300">+1 (555) 123-4567</span>
+                </div>
+                <div className="flex items-center">
+                  <Mail className="w-5 h-5 text-blue-400 mr-3" />
+                  <span className="text-gray-300">contact@kalidev.com</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h3 className="text-lg font-semibold mb-6 text-white">Company</h3>
+              <ul className="space-y-3">
+                {footerLinks.company.map((link, index) => (
+                  <li key={index}>
+                    <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-6 text-white">Services</h3>
+              <ul className="space-y-3">
+                {footerLinks.services.map((link, index) => (
+                  <li key={index}>
+                    <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-6 text-white">Resources</h3>
+              <ul className="space-y-3">
+                {footerLinks.resources.map((link, index) => (
+                  <li key={index}>
+                    <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Newsletter */}
+          <div className="border-t border-gray-800 pt-8 pb-6 mb-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-lg font-semibold mb-2 text-white">Subscribe to our newsletter</h3>
+                <p className="text-gray-400 mb-4">Stay updated with the latest news, features, and releases.</p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <input 
+                  type="email" 
+                  placeholder="Enter your email" 
+                  className="px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 flex-grow"
+                />
+                <Button className="whitespace-nowrap">
+                  Subscribe
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          {/* Social Media & Copyright */}
+          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <div className="flex space-x-4 mb-4 md:mb-0">
+              {socialLinks.map((link, index) => (
+                <a 
+                  key={index} 
+                  href={link.href} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-gray-800 p-2 rounded-full text-gray-400 hover:text-white hover:bg-gray-700 transition-colors"
+                  aria-label={link.name}
+                >
+                  {link.icon}
+                </a>
+              ))}
+            </div>
+            <div className="text-gray-500 text-sm">
+              <div className="flex flex-wrap justify-center md:justify-end gap-4 mb-2">
+                {footerLinks.legal.map((link, index) => (
+                  <Link key={index} href={link.href} className="hover:text-gray-300 transition-colors">
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+              <p>© 2025 KaliDev. All rights reserved.</p>
+            </div>
           </div>
         </div>
       </footer>
