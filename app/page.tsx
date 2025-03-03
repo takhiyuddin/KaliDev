@@ -209,9 +209,9 @@ export default function Home() {
     { name: "Twitter", icon: <Twitter className="w-5 h-5" />, href: "https://twitter.com" },
     { name: "Facebook", icon: <Facebook className="w-5 h-5" />, href: "https://facebook.com" },
     { name: "LinkedIn", icon: <Linkedin className="w-5 h-5" />, href: "https://linkedin.com" },
-    { name: "GitHub", icon: <Github className="w-5 h-5" />, href: "https://github.com" },
+    { name: "GitHub", icon: <Github className="w-5 h-5" />, href: "https://github.com/takhiyuddin" },
     { name: "YouTube", icon: <Youtube className="w-5 h-5" />, href: "https://youtube.com" },
-    { name: "Instagram", icon: <Instagram className="w-5 h-5" />, href: "https://instagram.com" }
+    { name: "Instagram", icon: <Instagram className="w-5 h-5" />, href: "https://instagram.com/tqydns" }
   ];
 
   return (
