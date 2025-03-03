@@ -490,18 +490,17 @@ export default function Home() {
                 <div className="flex items-start">
                   <MapPin className="w-5 h-5 text-blue-400 mt-0.5 mr-3" />
                   <span className="text-gray-300">
-                    123 Innovation Street<br />
-                    Tech District, San Francisco<br />
-                    CA 94103, USA
+                    Surakarta,<br />
+                    ID
                   </span>
                 </div>
                 <div className="flex items-center">
                   <Phone className="w-5 h-5 text-blue-400 mr-3" />
-                  <span className="text-gray-300">+1 (555) 123-4567</span>
+                  <span className="text-gray-300">+62 (895) 3240-73524</span>
                 </div>
                 <div className="flex items-center">
                   <Mail className="w-5 h-5 text-blue-400 mr-3" />
-                  <span className="text-gray-300">contact@kalidev.com</span>
+                  <span className="text-gray-300">afiftqydns@gmail.com</span>
                 </div>
               </div>
             </div>
