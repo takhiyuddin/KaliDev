@@ -490,13 +490,15 @@ export default function Home() {
                 <div className="flex items-start">
                   <MapPin className="w-5 h-5 text-blue-400 mt-0.5 mr-3" />
                   <span className="text-gray-300">
-                    Surakarta,<br />
-                    ID
+                  Jalan Raya Randusari-Klaten KM 0.4<br />
+                  Cemoro 07/02, Dusun III, Randusari
+                  Boyolali,<br />
+                    Central Java 57372
                   </span>
                 </div>
                 <div className="flex items-center">
                   <Phone className="w-5 h-5 text-blue-400 mr-3" />
-                  <span className="text-gray-300">+62 (895) 3240-73524</span>
+                  <span className="text-gray-300">+62 895-3240-73524</span>
                 </div>
                 <div className="flex items-center">
                   <Mail className="w-5 h-5 text-blue-400 mr-3" />
