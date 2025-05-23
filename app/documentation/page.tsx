@@ -62,7 +62,7 @@ export default function Documentation() {
         >
           <h1 className="text-4xl font-bold mb-8">Documentation</h1>
           <p className="text-xl text-gray-600 mb-12">
-            Everything you need to know about building with KaliDev
+            Everything you need to know about building with Koderupa
           </p>
         </motion.div>
 
