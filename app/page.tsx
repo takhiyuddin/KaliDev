@@ -473,95 +473,119 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white pt-16 pb-8 px-4 sm:px-6 lg:px-8">
+      <footer className="bg-gray-900 text-white pt-24 pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
             {/* Company Info */}
-            <div className="lg:col-span-2">
-              <div className="mb-6">
-                <Link href="/">
-                  <span className="text-2xl font-bold text-white">KaliDev</span>
-                </Link>
-              </div>
-              <p className="text-gray-400 mb-6 max-w-md">
+            <div className="lg:col-span-5">
+              <Link href="/" className="inline-block mb-8">
+                <span className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 text-transparent bg-clip-text">KaliDev</span>
+              </Link>
+              <p className="text-gray-400 mb-8 text-lg leading-relaxed">
                 Empowering developers and businesses with cutting-edge tools and solutions to build exceptional digital experiences.
               </p>
               <div className="space-y-4">
-                <div className="flex items-start">
-                  <MapPin className="w-5 h-5 text-blue-400 mt-0.5 mr-3" />
-                  <span className="text-gray-300">
-                  Jalan Raya Randusari-Klaten KM 0.4<br />
-                  Cemoro 07/02, Dusun III, Randusari
-                  Boyolali,<br />
-                    Central Java 57372
+                <div className="flex items-start space-x-4">
+                  <MapPin className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />
+                  <span className="text-gray-300 leading-relaxed">
+                    Jalan Raya Randusari-Klaten KM 0.4,<br />
+                    Cemoro 07/02, Dusun III, Randusari<br />
+                    Boyolali, Central Java 57372
                   </span>
                 </div>
-                <div className="flex items-center">
-                  <Phone className="w-5 h-5 text-blue-400 mr-3" />
-                  <span className="text-gray-300">+62 895-3240-73524</span>
+                <div className="flex items-center space-x-4">
+                  <Phone className="w-6 h-6 text-blue-400 flex-shrink-0" />
+                  <a href="tel:+6289532407352" className="text-gray-300 hover:text-white transition-colors">
+                    +62 895-3240-73524
+                  </a>
                 </div>
-                <div className="flex items-center">
-                  <Mail className="w-5 h-5 text-blue-400 mr-3" />
-                  <span className="text-gray-300">afiftqydns@gmail.com</span>
+                <div className="flex items-center space-x-4">
+                  <Mail className="w-6 h-6 text-blue-400 flex-shrink-0" />
+                  <a href="mailto:afiftqydns@gmail.com" className="text-gray-300 hover:text-white transition-colors">
+                    afiftqydns@gmail.com
+                  </a>
                 </div>
               </div>
             </div>
 
             {/* Quick Links */}
-            <div>
-              <h3 className="text-lg font-semibold mb-6 text-white">Company</h3>
-              <ul className="space-y-3">
-                {footerLinks.company.map((link, index) => (
-                  <li key={index}>
-                    <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div>
+                <h3 className="text-lg font-semibold mb-6 text-white relative inline-block">
+                  Company
+                  <span className="absolute bottom-0 left-0 w-1/2 h-0.5 bg-blue-500"></span>
+                </h3>
+                <ul className="space-y-4">
+                  {footerLinks.company.map((link, index) => (
+                    <li key={index}>
+                      <Link 
+                        href={link.href} 
+                        className="text-gray-400 hover:text-white transition-colors flex items-center group"
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-            <div>
-              <h3 className="text-lg font-semibold mb-6 text-white">Services</h3>
-              <ul className="space-y-3">
-                {footerLinks.services.map((link, index) => (
-                  <li key={index}>
-                    <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-6 text-white relative inline-block">
+                  Services
+                  <span className="absolute bottom-0 left-0 w-1/2 h-0.5 bg-blue-500"></span>
+                </h3>
+                <ul className="space-y-4">
+                  {footerLinks.services.map((link, index) => (
+                    <li key={index}>
+                      <Link 
+                        href={link.href} 
+                        className="text-gray-400 hover:text-white transition-colors flex items-center group"
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-            <div>
-              <h3 className="text-lg font-semibold mb-6 text-white">Resources</h3>
-              <ul className="space-y-3">
-                {footerLinks.resources.map((link, index) => (
-                  <li key={index}>
-                    <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <div>
+                <h3 className="text-lg font-semibold mb-6 text-white relative inline-block">
+                  Resources
+                  <span className="absolute bottom-0 left-0 w-1/2 h-0.5 bg-blue-500"></span>
+                </h3>
+                <ul className="space-y-4">
+                  {footerLinks.resources.map((link, index) => (
+                    <li key={index}>
+                      <Link 
+                        href={link.href} 
+                        className="text-gray-400 hover:text-white transition-colors flex items-center group"
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
 
           {/* Newsletter */}
-          <div className="border-t border-gray-800 pt-8 pb-6 mb-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-lg font-semibold mb-2 text-white">Subscribe to our newsletter</h3>
-                <p className="text-gray-400 mb-4">Stay updated with the latest news, features, and releases.</p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-3">
+          <div className="border-t border-gray-800 pt-12 pb-8">
+            <div className="max-w-3xl mx-auto text-center">
+              <h3 className="text-2xl font-semibold mb-3 text-white">Stay Connected</h3>
+              <p className="text-gray-400 mb-8">
+                Subscribe to our newsletter for the latest updates, features, and releases.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <input 
                   type="email" 
-                  placeholder="Enter your email" 
-                  className="px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 flex-grow"
+                  placeholder="Enter your email"
+                  className="px-6 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 flex-grow max-w-md"
                 />
-                <Button className="whitespace-nowrap">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                   Subscribe
                 </Button>
               </div>
@@ -569,30 +593,36 @@ export default function Home() {
           </div>
 
           {/* Social Media & Copyright */}
-          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <div className="flex space-x-4 mb-4 md:mb-0">
+          <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <div className="flex space-x-6 mb-6 md:mb-0">
               {socialLinks.map((link, index) => (
                 <a 
                   key={index} 
                   href={link.href} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="bg-gray-800 p-2 rounded-full text-gray-400 hover:text-white hover:bg-gray-700 transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors"
                   aria-label={link.name}
                 >
                   {link.icon}
                 </a>
               ))}
             </div>
-            <div className="text-gray-500 text-sm">
-              <div className="flex flex-wrap justify-center md:justify-end gap-4 mb-2">
+            <div className="text-gray-400 text-sm">
+              <div className="flex flex-wrap justify-center md:justify-end gap-6 mb-4">
                 {footerLinks.legal.map((link, index) => (
-                  <Link key={index} href={link.href} className="hover:text-gray-300 transition-colors">
+                  <Link 
+                    key={index} 
+                    href={link.href} 
+                    className="hover:text-white transition-colors"
+                  >
                     {link.name}
                   </Link>
                 ))}
               </div>
-              <p>© 2025 KaliDev. All rights reserved.</p>
+              <p className="text-center md:text-right">
+                © {new Date().getFullYear()} KaliDev. All rights reserved.
+              </p>
             </div>
           </div>
         </div>
