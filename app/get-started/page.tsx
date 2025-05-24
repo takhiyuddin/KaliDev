@@ -92,7 +92,6 @@ export default function GetStarted() {
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Location</h3>
                   <p className="text-gray-600">
-                    <br />
                     Boyolali,<br />
                     Central Java
                   </p>
