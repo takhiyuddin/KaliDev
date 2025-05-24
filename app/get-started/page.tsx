@@ -92,9 +92,9 @@ export default function GetStarted() {
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Location</h3>
                   <p className="text-gray-600">
-                    Jalan Raya Randusari-Klaten KM 0.4<br />
-                    Cemoro 07/02, Dusun III, Randusari<br />
-                    Boyolali, Central Java 57372
+                    <br />
+                    Boyolali,<br />
+                    Central Java 57372
                   </p>
                 </div>
               </div>
