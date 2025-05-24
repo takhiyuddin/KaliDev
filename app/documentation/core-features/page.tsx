@@ -12,7 +12,7 @@ export default function CoreFeatures() {
       icon: <Lock className="w-5 h-5" />,
       content: `
         <h3 class="text-xl font-semibold mb-4">Authentication</h3>
-        <p class="mb-4">KaliDev provides a robust authentication system that supports multiple authentication methods and security features.</p>
+        <p class="mb-4">Koderupa provides a robust authentication system that supports multiple authentication methods and security features.</p>
         
         <h4 class="font-medium mb-2">Supported Authentication Methods</h4>
         <ul class="list-disc pl-5 mb-4 space-y-1">
@@ -34,11 +34,11 @@ export default function CoreFeatures() {
         
         <h4 class="font-medium mb-2">Implementation Example</h4>
         <pre class="bg-gray-800 text-white p-3 rounded mt-2 overflow-x-auto"><code>// Initialize authentication
-import { KaliAuth } from '@kalidev/auth';
+import { KoderupaAuth } from '@koderupa/auth';
 
-const auth = new KaliAuth({
-  apiKey: process.env.KALIDEV_API_KEY,
-  authDomain: 'your-app.kalidev.com'
+const auth = new KoderupaAuth({
+  apiKey: process.env.KODERUPA_API_KEY,
+  authDomain: 'your-app.koderupa.com'
 });
 
 // Sign in a user
@@ -57,7 +57,7 @@ const signIn = async (email, password) => {
       icon: <Database className="w-5 h-5" />,
       content: `
         <h3 class="text-xl font-semibold mb-4">Database</h3>
-        <p class="mb-4">KaliDev's database solution provides a scalable, secure, and easy-to-use data storage system for your applications.</p>
+        <p class="mb-4">Koderupa's database solution provides a scalable, secure, and easy-to-use data storage system for your applications.</p>
         
         <h4 class="font-medium mb-2">Database Features</h4>
         <ul class="list-disc pl-5 mb-4 space-y-1">
@@ -80,10 +80,10 @@ const signIn = async (email, password) => {
         
         <h4 class="font-medium mb-2">Implementation Example</h4>
         <pre class="bg-gray-800 text-white p-3 rounded mt-2 overflow-x-auto"><code>// Initialize database
-import { KaliDB } from '@kalidev/database';
+import { KoderupaDB } from '@koderupa/database';
 
-const db = new KaliDB({
-  apiKey: process.env.KALIDEV_API_KEY,
+const db = new KoderupaDB({
+  apiKey: process.env.KODERUPA_API_KEY,
   projectId: 'your-project-id'
 });
 
@@ -107,7 +107,7 @@ const addUser = async (userData) => {
       icon: <HardDrive className="w-5 h-5" />,
       content: `
         <h3 class="text-xl font-semibold mb-4">File Storage</h3>
-        <p class="mb-4">KaliDev's file storage solution allows you to securely store and serve user-generated content and application assets.</p>
+        <p class="mb-4">Koderupa's file storage solution allows you to securely store and serve user-generated content and application assets.</p>
         
         <h4 class="font-medium mb-2">Storage Features</h4>
         <ul class="list-disc pl-5 mb-4 space-y-1">
@@ -130,10 +130,10 @@ const addUser = async (userData) => {
         
         <h4 class="font-medium mb-2">Implementation Example</h4>
         <pre class="bg-gray-800 text-white p-3 rounded mt-2 overflow-x-auto"><code>// Initialize storage
-import { KaliStorage } from '@kalidev/storage';
+import { KoderupaStorage } from '@koderupa/storage';
 
-const storage = new KaliStorage({
-  apiKey: process.env.KALIDEV_API_KEY,
+const storage = new KoderupaStorage({
+  apiKey: process.env.KODERUPA_API_KEY,
   projectId: 'your-project-id'
 });
 
@@ -155,7 +155,7 @@ const uploadFile = async (file, path) => {
       icon: <Server className="w-5 h-5" />,
       content: `
         <h3 class="text-xl font-semibold mb-4">API Reference</h3>
-        <p class="mb-4">KaliDev provides a comprehensive API that allows you to interact with all platform services programmatically.</p>
+        <p class="mb-4">Koderupa provides a comprehensive API that allows you to interact with all platform services programmatically.</p>
         
         <h4 class="font-medium mb-2">API Features</h4>
         <ul class="list-disc pl-5 mb-4 space-y-1">
@@ -206,9 +206,9 @@ const uploadFile = async (file, path) => {
 import axios from 'axios';
 
 const apiClient = axios.create({
-  baseURL: 'https://api.kalidev.com/v1',
+  baseURL: 'https://api.koderupa.com/v1',
   headers: {
-    'Authorization': \`Bearer \${process.env.KALIDEV_API_KEY}\`,
+    'Authorization': \`Bearer \${process.env.KODERUPA_API_KEY}\`,
     'Content-Type': 'application/json'
   }
 });
@@ -241,7 +241,7 @@ const fetchUsers = async () => {
         >
           <h1 className="text-4xl font-bold mb-8">Core Features</h1>
           <p className="text-xl text-gray-600 mb-12">
-            Explore the powerful features that make KaliDev the perfect platform for modern applications
+            Explore the powerful features that make Koderupa the perfect platform for modern applications
           </p>
         </motion.div>
 

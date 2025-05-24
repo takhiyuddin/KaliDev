@@ -4,7 +4,7 @@ import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 
 export const metadata: Metadata = {
-  title: 'KaliDev - Modern Development Platform',
+  title: 'Koderupa - Modern Development Platform',
   description: 'A beautiful and modern landing page built with Next.js and Tailwind CSS',
 };
 
