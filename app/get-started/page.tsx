@@ -94,7 +94,7 @@ export default function GetStarted() {
                   <p className="text-gray-600">
                     <br />
                     Boyolali,<br />
-                    Central Java 57372
+                    Central Java
                   </p>
                 </div>
               </div>
