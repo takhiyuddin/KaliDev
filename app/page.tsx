@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Code2, FolderKanban, BarChart, MessageSquare, Smartphone, Globe, Database, Server, Headphones, Wrench, Palette, Shield, Cloud, LineChart, Zap, Laptop, FileText, Image, Video, Users, ShoppingCart, Layers, Cpu, BookOpen, Map, PieChart, Briefcase, Lightbulb, Menu, X, Star, Quote, Mail, Phone, MapPin } from "lucide-react";
+import { ArrowRight, Code2, FolderKanban, BarChart, MessageSquare, Smartphone, Globe, Database, Server, Headphones, Wrench, Palette, Shield, Cloud, LineChart, Zap, Laptop, FileText, Image, Video, Users, ShoppingCart, Layers, Cpu, BookOpen, Map, PieChart, Briefcase, Lightbulb, Menu, X, Star, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useState } from "react";
@@ -431,139 +431,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            {/* Company Info */}
-            <div>
-              <h3 className="text-xl font-bold mb-4">Koderupa</h3>
-              <p className="text-gray-400 mb-6">
-                Empowering developers and businesses with cutting-edge tools and solutions to build exceptional digital experiences.
-              </p>
-              <div className="space-y-3">
-                <div className="flex items-center">
-                  <MapPin className="w-5 h-5 mr-3 text-blue-400" />
-                  <p className="text-gray-400">
-                    Jalan Raya Randusari-Klaten KM 0.4<br />
-                    Cemoro 07/02, Dusun III, Randusari<br />
-                    Boyolali, Central Java 57372
-                  </p>
-                </div>
-                <div className="flex items-center">
-                  <Phone className="w-5 h-5 mr-3 text-blue-400" />
-                  <p className="text-gray-400">+62 895-3240-73524</p>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="w-5 h-5 mr-3 text-blue-400" />
-                  <p className="text-gray-400">afiftqydns@gmail.com</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-              <ul className="space-y-3">
-                <li>
-                  <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services" className="text-gray-400 hover:text-white transition-colors">
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/portfolio" className="text-gray-400 hover:text-white transition-colors">
-                    Portfolio
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/pricing" className="text-gray-400 hover:text-white transition-colors">
-                    Pricing
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/documentation" className="text-gray-400 hover:text-white transition-colors">
-                    Documentation
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Services */}
-            <div>
-              <h3 className="text-xl font-bold mb-4">Services</h3>
-              <ul className="space-y-3">
-                <li>
-                  <Link href="/services/web-development" className="text-gray-400 hover:text-white transition-colors">
-                    Web Development
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/mobile-development" className="text-gray-400 hover:text-white transition-colors">
-                    Mobile Development
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/ui-ux-design" className="text-gray-400 hover:text-white transition-colors">
-                    UI/UX Design
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/cloud-services" className="text-gray-400 hover:text-white transition-colors">
-                    Cloud Services
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/api-development" className="text-gray-400 hover:text-white transition-colors">
-                    API Development
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Newsletter */}
-            <div>
-              <h3 className="text-xl font-bold mb-4">Newsletter</h3>
-              <p className="text-gray-400 mb-4">
-                Subscribe to our newsletter to receive updates and insights about our services and industry trends.
-              </p>
-              <form className="space-y-3">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-300"
-                />
-                <Button className="w-full">Subscribe</Button>
-              </form>
-            </div>
-          </div>
-
-          {/* Bottom Bar */}
-          <div className="mt-12 pt-8 border-t border-gray-800">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-400 text-sm mb-4 md:mb-0">
-                © {new Date().getFullYear()} Koderupa. All rights reserved.
-              </p>
-              <div className="flex space-x-6">
-                <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Privacy Policy
-                </Link>
-                <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Terms of Service
-                </Link>
-                <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Cookie Policy
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
