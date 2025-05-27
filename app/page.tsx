@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Code2, FolderKanban, BarChart, MessageSquare, Smartphone, Globe, Database, Server, Headphones, Wrench, Palette, Shield, Cloud, LineChart, Zap, Laptop, FileText, Image, Video, Users, ShoppingCart, Layers, Cpu, BookOpen, Map, PieChart, Briefcase, Lightbulb, Menu, X, Star, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/theme-toggle";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -83,7 +82,7 @@ export default function Home() {
       position: "CTO, TechVision Inc.",
       company: "TechVision Inc.",
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
-      quote: "Koderupa transformed our business with their e-commerce platform. The attention to detail and performance optimization exceeded our expectations. Our conversion rates have increased by 40% since launch.",
+      quote: "KaliDev transformed our business with their e-commerce platform. The attention to detail and performance optimization exceeded our expectations. Our conversion rates have increased by 40% since launch.",
       rating: 5
     },
     {
@@ -91,7 +90,7 @@ export default function Home() {
       position: "Founder, HealthPlus",
       company: "HealthPlus",
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
-      quote: "The healthcare management system Koderupa built for us has revolutionized how we handle patient data. The platform is intuitive, secure, and has significantly improved our operational efficiency.",
+      quote: "The healthcare management system KaliDev built for us has revolutionized how we handle patient data. The platform is intuitive, secure, and has significantly improved our operational efficiency.",
       rating: 5
     },
     {
@@ -99,7 +98,7 @@ export default function Home() {
       position: "Marketing Director, EduLearn",
       company: "EduLearn",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
-      quote: "Our learning management system has received outstanding feedback from both instructors and students. Koderupa delivered a product that was not only beautiful but also incredibly functional and user-friendly.",
+      quote: "Our learning management system has received outstanding feedback from both instructors and students. KaliDev delivered a product that was not only beautiful but also incredibly functional and user-friendly.",
       rating: 5
     },
     {
@@ -107,7 +106,7 @@ export default function Home() {
       position: "CEO, PropertyFinder",
       company: "PropertyFinder",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
-      quote: "The real estate marketplace Koderupa developed for us has completely changed how we connect buyers with sellers. The virtual tour feature has been particularly impressive and has set us apart from competitors.",
+      quote: "The real estate marketplace KaliDev developed for us has completely changed how we connect buyers with sellers. The virtual tour feature has been particularly impressive and has set us apart from competitors.",
       rating: 4
     }
   ];
@@ -176,30 +175,30 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Navigation */}
-      <nav className="fixed w-full bg-background/80 backdrop-blur-sm z-50 border-b">
+      <nav className="fixed w-full bg-white/80 backdrop-blur-sm z-50 border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <Link href="/">
-                <span className="text-xl font-bold">Koderupa</span>
+                <span className="text-xl font-bold">KaliDev</span>
               </Link>
             </div>
-            <div className="hidden md:flex md:items-center md:space-x-4">
-              <Link href="/pricing">
-                <Button variant="ghost">Pricing</Button>
-              </Link>
-              <Link href="/documentation">
-                <Button variant="ghost">Documentation</Button>
-              </Link>
-              <Link href="/get-started">
-                <Button>Contact</Button>
-              </Link>
-              <ThemeToggle />
+            <div className="hidden md:block">
+              <div className="flex items-center space-x-4">
+                <Link href="/pricing">
+                  <Button variant="ghost">Pricing</Button>
+                </Link>
+                <Link href="/documentation">
+                  <Button variant="ghost">Documentation</Button>
+                </Link>
+                <Link href="/get-started">
+                  <Button>Contact</Button>
+                </Link>
+              </div>
             </div>
-            <div className="md:hidden flex items-center space-x-2">
-              <ThemeToggle />
+            <div className="md:hidden">
               <Button variant="ghost" size="icon" onClick={toggleMenu}>
                 <Menu className="h-6 w-6" />
               </Button>
@@ -214,7 +213,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden bg-background border-b shadow-lg"
+            className="md:hidden bg-white border-b shadow-lg"
           >
             <div className="px-4 pt-2 pb-4 space-y-1 sm:px-6">
               <div className="flex justify-end">
@@ -247,11 +246,11 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 mb-6">
               Build faster with our
               <span className="text-blue-600"> modern platform</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-10">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-10">
               Empower your development workflow with cutting-edge tools and frameworks.
               Build scalable applications faster than ever before.
             </p>
@@ -267,7 +266,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -276,7 +275,7 @@ export default function Home() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive development solutions to bring your ideas to life
             </p>
           </motion.div>
@@ -288,11 +287,11 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="p-6 rounded-2xl bg-muted border hover:shadow-md transition-shadow"
+                className="p-6 rounded-2xl bg-gray-50 border hover:shadow-md transition-shadow"
               >
                 {service.icon}
                 <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                <p className="text-muted-foreground">
+                <p className="text-gray-600">
                   {service.description}
                 </p>
               </motion.div>
@@ -302,7 +301,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -311,8 +310,8 @@ export default function Home() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Portfolio Projects</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Explore what you can build with Koderupa's powerful development platform
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Explore what you can build with KaliDev's powerful development platform
             </p>
           </motion.div>
           
@@ -323,7 +322,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-background p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+                className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="bg-blue-100 p-3 rounded-lg w-fit mb-4 text-blue-600">
                   {index === 0 ? <ShoppingCart className="w-6 h-6" /> : 
@@ -340,10 +339,10 @@ export default function Home() {
                    <Cpu className="w-6 h-6" />}
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-muted-foreground mb-4">{project.description}</p>
+                <p className="text-gray-600 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, i) => (
-                    <span key={i} className="bg-muted text-muted-foreground px-3 py-1 rounded-full text-sm">
+                    <span key={i} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
                       {tag}
                     </span>
                   ))}
@@ -355,7 +354,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -364,7 +363,7 @@ export default function Home() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Client Testimonials</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Hear what our clients have to say about their experience working with us
             </p>
           </motion.div>
@@ -376,7 +375,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-muted p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow relative"
+                className="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow relative"
               >
                 <div className="absolute top-6 right-6 text-blue-500">
                   <Quote className="w-10 h-10 opacity-20" />
@@ -391,18 +390,18 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold">{testimonial.name}</h3>
-                    <p className="text-muted-foreground">{testimonial.position}</p>
+                    <p className="text-gray-600">{testimonial.position}</p>
                     <div className="flex mt-1">
                       {[...Array(5)].map((_, i) => (
                         <Star 
                           key={i} 
-                          className={`w-4 h-4 ${i < testimonial.rating ? 'text-yellow-400 fill-yellow-400' : 'text-muted'}`} 
+                          className={`w-4 h-4 ${i < testimonial.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} 
                         />
                       ))}
                     </div>
                   </div>
                 </div>
-                <p className="text-muted-foreground italic">"{testimonial.quote}"</p>
+                <p className="text-gray-700 italic">"{testimonial.quote}"</p>
               </motion.div>
             ))}
           </div>
