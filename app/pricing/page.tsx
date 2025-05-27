@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, Check, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/theme-toggle";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -132,13 +133,16 @@ Notes: ${formData.notes || "None"}
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-background to-muted">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <Link href="/">
-          <Button variant="ghost" className="mb-8">
-            <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
-          </Button>
-        </Link>
+        <div className="flex items-center justify-between mb-8">
+          <Link href="/">
+            <Button variant="ghost">
+              <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
+            </Button>
+          </Link>
+          <ThemeToggle />
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -147,7 +151,7 @@ Notes: ${formData.notes || "None"}
           className="text-center mb-16"
         >
           <h1 className="text-4xl font-bold mb-4">Simple, Transparent Pricing</h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-muted-foreground">
             Choose the plan that best fits your needs
           </p>
         </motion.div>
@@ -160,11 +164,11 @@ Notes: ${formData.notes || "None"}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+                className="bg-card p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border"
               >
                 <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                 <div className="text-3xl font-bold text-blue-600 mb-4">{plan.price}</div>
-                <p className="text-gray-600 mb-6">{plan.description}</p>
+                <p className="text-muted-foreground mb-6">{plan.description}</p>
                 <Button 
                   className="w-full mb-8"
                   onClick={() => setSelectedPlan(index)}
@@ -173,7 +177,7 @@ Notes: ${formData.notes || "None"}
                 </Button>
                 <ul className="space-y-4">
                   {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-center text-gray-700">
+                    <li key={i} className="flex items-center text-card-foreground">
                       <Check className="w-5 h-5 text-green-500 mr-2" />
                       {feature}
                     </li>
@@ -187,7 +191,7 @@ Notes: ${formData.notes || "None"}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-white p-8 rounded-xl shadow-md"
+            className="bg-card p-8 rounded-xl shadow-md border"
           >
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-2xl font-bold">Order Form</h2>
@@ -203,30 +207,30 @@ Notes: ${formData.notes || "None"}
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Package Details */}
-              <div className="bg-gray-50 p-6 rounded-xl">
+              <div className="bg-muted p-6 rounded-xl">
                 <h3 className="text-xl font-semibold mb-4">{plans[selectedPlan].name} Package</h3>
                 
                 <div className="space-y-4">
                   <div>
-                    <p className="text-sm text-gray-500">Price:</p>
+                    <p className="text-sm text-muted-foreground">Price:</p>
                     <p className="text-lg font-semibold text-blue-600">{plans[selectedPlan].price}</p>
                   </div>
                   
                   <div>
-                    <p className="text-sm text-gray-500">Maintenance:</p>
+                    <p className="text-sm text-muted-foreground">Maintenance:</p>
                     <p className="font-medium">{plans[selectedPlan].maintenance}</p>
                   </div>
                   
                   <div>
-  <p className="text-sm text-gray-500">Revision:</p>
-  <p className="font-medium">
-    {plans[selectedPlan].name === "Custom" 
-      ? "Unlimited" 
-      : plans[selectedPlan].name === "Pro" 
-      ? "5x" 
-      : "3x"}
-  </p>
-</div>
+                    <p className="text-sm text-muted-foreground">Revision:</p>
+                    <p className="font-medium">
+                      {plans[selectedPlan].name === "Custom" 
+                        ? "Unlimited" 
+                        : plans[selectedPlan].name === "Pro" 
+                        ? "5x" 
+                        : "3x"}
+                    </p>
+                  </div>
                 </div>
                 
                 <div className="mt-6">
@@ -247,7 +251,7 @@ Notes: ${formData.notes || "None"}
                 <h3 className="text-xl font-semibold mb-4">Order Details</h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label htmlFor="fullName" className="block text-sm font-medium mb-1">
                       Full Name
                     </label>
                     <input
@@ -256,14 +260,14 @@ Notes: ${formData.notes || "None"}
                       name="fullName"
                       value={formData.fullName}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-2 bg-background border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       placeholder="Your full name"
                       required
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="whatsapp" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label htmlFor="whatsapp" className="block text-sm font-medium mb-1">
                       WhatsApp No.
                     </label>
                     <input
@@ -272,14 +276,14 @@ Notes: ${formData.notes || "None"}
                       name="whatsapp"
                       value={formData.whatsapp}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-2 bg-background border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       placeholder="Example: 081234567890"
                       required
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="businessName" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label htmlFor="businessName" className="block text-sm font-medium mb-1">
                       Business/ Company Name
                     </label>
                     <input
@@ -288,14 +292,14 @@ Notes: ${formData.notes || "None"}
                       name="businessName"
                       value={formData.businessName}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-2 bg-background border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       placeholder="Name of business or company"
                       required
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="businessType" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label htmlFor="businessType" className="block text-sm font-medium mb-1">
                       Business Type
                     </label>
                     <select
@@ -303,7 +307,7 @@ Notes: ${formData.notes || "None"}
                       name="businessType"
                       value={formData.businessType}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-2 bg-background border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       required
                     >
                       <option value="" disabled>Select the type of business</option>
@@ -314,7 +318,7 @@ Notes: ${formData.notes || "None"}
                   </div>
                   
                   <div>
-                    <label htmlFor="notes" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label htmlFor="notes" className="block text-sm font-medium mb-1">
                       Notes (Optional)
                     </label>
                     <textarea
@@ -323,7 +327,7 @@ Notes: ${formData.notes || "None"}
                       value={formData.notes}
                       onChange={handleInputChange}
                       rows={4}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-2 bg-background border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       placeholder="Write down your special needs or questions"
                     ></textarea>
                   </div>
