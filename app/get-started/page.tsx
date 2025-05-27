@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, Mail, Phone, Clock, MapPin, Instagram, Github, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/theme-toggle";
 import Link from "next/link";
 
 export default function GetStarted() {
@@ -13,13 +14,16 @@ export default function GetStarted() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-background to-muted">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <Link href="/">
-          <Button variant="ghost" className="mb-8">
-            <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
-          </Button>
-        </Link>
+        <div className="flex items-center justify-between mb-8">
+          <Link href="/">
+            <Button variant="ghost">
+              <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
+            </Button>
+          </Link>
+          <ThemeToggle />
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -30,49 +34,49 @@ export default function GetStarted() {
           <div>
             <h1 className="text-4xl font-bold mb-8">Contact Us</h1>
             <div className="space-y-8">
-              <div className="bg-white p-6 rounded-xl shadow-sm">
+              <div className="bg-card p-6 rounded-xl shadow-sm border">
                 <form className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label htmlFor="name" className="block text-sm font-medium mb-1">
                       Your Name
                     </label>
                     <input
                       type="text"
                       id="name"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-2 bg-background border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       placeholder="Enter your name"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label htmlFor="email" className="block text-sm font-medium mb-1">
                       Email Address
                     </label>
                     <input
                       type="email"
                       id="email"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-2 bg-background border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       placeholder="Enter your email"
                     />
                   </div>
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label htmlFor="subject" className="block text-sm font-medium mb-1">
                       Subject
                     </label>
                     <input
                       type="text"
                       id="subject"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-2 bg-background border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       placeholder="Enter subject"
                     />
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label htmlFor="message" className="block text-sm font-medium mb-1">
                       Message
                     </label>
                     <textarea
                       id="message"
                       rows={5}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-2 bg-background border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       placeholder="Enter your message"
                     ></textarea>
                   </div>
@@ -84,14 +88,14 @@ export default function GetStarted() {
 
           <div>
             <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
-            <div className="bg-white p-6 rounded-xl shadow-sm mb-6">
+            <div className="bg-card p-6 rounded-xl shadow-sm border mb-6">
               <div className="flex items-start mb-6">
                 <div className="bg-blue-100 p-3 rounded-lg text-blue-600 mr-4">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Location</h3>
-                  <p className="text-gray-600">
+                  <p className="text-muted-foreground">
                     Boyolali, Central Java, Indonesia<br />
                   </p>
                 </div>
@@ -103,7 +107,7 @@ export default function GetStarted() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Phone Number</h3>
-                  <p className="text-gray-600">+62 895 3240 73524</p>
+                  <p className="text-muted-foreground">+62 895 3240 73524</p>
                 </div>
               </div>
 
@@ -113,7 +117,7 @@ export default function GetStarted() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Email</h3>
-                  <p className="text-gray-600">afiftqydns@gmail.com</p>
+                  <p className="text-muted-foreground">afiftqydns@gmail.com</p>
                 </div>
               </div>
 
@@ -123,14 +127,14 @@ export default function GetStarted() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Operating Hours</h3>
-                  <p className="text-gray-600">
+                  <p className="text-muted-foreground">
                     Monday - Sunday: 09:00 - 22:00 WIB
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-sm mb-6">
+            <div className="bg-card p-6 rounded-xl shadow-sm border mb-6">
               <div className="flex items-center mb-4">
                 <div className="bg-blue-100 p-3 rounded-lg text-blue-600 mr-3">
                   <Globe className="w-6 h-6" />
@@ -144,18 +148,18 @@ export default function GetStarted() {
                     href={platform.url} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                    className="flex items-center p-3 rounded-lg hover:bg-muted transition-colors"
                   >
                     <div className="bg-blue-50 p-2 rounded-md text-blue-600 mr-3">
                       {platform.icon}
                     </div>
-                    <span className="text-gray-700">{platform.name}</span>
+                    <span className="text-card-foreground">{platform.name}</span>
                   </a>
                 ))}
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-sm">
+            <div className="bg-card p-6 rounded-xl shadow-sm border">
               <h3 className="text-lg font-semibold mb-4">Our Location</h3>
               <div className="aspect-video rounded-lg overflow-hidden">
                 <iframe
