@@ -3,27 +3,23 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, Mail, Phone, Clock, MapPin, Instagram, Github, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/theme-toggle";
 import Link from "next/link";
 
 export default function GetStarted() {
   const socialMedia = [
     { name: "Instagram", icon: <Instagram className="w-5 h-5" />, url: "https://instagram.com/tqydns" },
-    { name: "TikTok", icon: <svg className="w-5 h-5\" viewBox="0 0 24 24\" fill="none\" xmlns="http://www.w3.org/2000/svg"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z\" fill="currentColor"/></svg>, url: "https://tiktok.com/@tqydns" },
+    { name: "TikTok", icon: <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" fill="currentColor"/></svg>, url: "https://tiktok.com/@tqydns" },
     { name: "Github", icon: <Github className="w-5 h-5" />, url: "https://github.com/takhiyuddin" }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div className="flex items-center justify-between mb-8">
-          <Link href="/">
-            <Button variant="ghost">
-              <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
-            </Button>
-          </Link>
-          <ThemeToggle />
-        </div>
+        <Link href="/">
+          <Button variant="ghost" className="mb-8">
+            <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
+          </Button>
+        </Link>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,49 +30,49 @@ export default function GetStarted() {
           <div>
             <h1 className="text-4xl font-bold mb-8">Contact Us</h1>
             <div className="space-y-8">
-              <div className="bg-card p-6 rounded-xl shadow-sm border">
+              <div className="bg-white p-6 rounded-xl shadow-sm">
                 <form className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-1">
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                       Your Name
                     </label>
                     <input
                       type="text"
                       id="name"
-                      className="w-full px-4 py-2 bg-background border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       placeholder="Enter your name"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-1">
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                       Email Address
                     </label>
                     <input
                       type="email"
                       id="email"
-                      className="w-full px-4 py-2 bg-background border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       placeholder="Enter your email"
                     />
                   </div>
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium mb-1">
+                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
                       Subject
                     </label>
                     <input
                       type="text"
                       id="subject"
-                      className="w-full px-4 py-2 bg-background border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       placeholder="Enter subject"
                     />
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium mb-1">
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                       Message
                     </label>
                     <textarea
                       id="message"
                       rows={5}
-                      className="w-full px-4 py-2 bg-background border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       placeholder="Enter your message"
                     ></textarea>
                   </div>
@@ -88,14 +84,14 @@ export default function GetStarted() {
 
           <div>
             <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
-            <div className="bg-card p-6 rounded-xl shadow-sm border mb-6">
+            <div className="bg-white p-6 rounded-xl shadow-sm mb-6">
               <div className="flex items-start mb-6">
                 <div className="bg-blue-100 p-3 rounded-lg text-blue-600 mr-4">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Location</h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-gray-600">
                     Boyolali, Central Java, Indonesia<br />
                   </p>
                 </div>
@@ -107,7 +103,7 @@ export default function GetStarted() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Phone Number</h3>
-                  <p className="text-muted-foreground">+62 895 3240 73524</p>
+                  <p className="text-gray-600">+62 895 3240 73524</p>
                 </div>
               </div>
 
@@ -117,7 +113,7 @@ export default function GetStarted() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Email</h3>
-                  <p className="text-muted-foreground">afiftqydns@gmail.com</p>
+                  <p className="text-gray-600">afiftqydns@gmail.com</p>
                 </div>
               </div>
 
@@ -127,14 +123,14 @@ export default function GetStarted() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Operating Hours</h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-gray-600">
                     Monday - Sunday: 09:00 - 22:00 WIB
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-card p-6 rounded-xl shadow-sm border mb-6">
+            <div className="bg-white p-6 rounded-xl shadow-sm mb-6">
               <div className="flex items-center mb-4">
                 <div className="bg-blue-100 p-3 rounded-lg text-blue-600 mr-3">
                   <Globe className="w-6 h-6" />
@@ -148,18 +144,18 @@ export default function GetStarted() {
                     href={platform.url} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center p-3 rounded-lg hover:bg-muted transition-colors"
+                    className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors"
                   >
                     <div className="bg-blue-50 p-2 rounded-md text-blue-600 mr-3">
                       {platform.icon}
                     </div>
-                    <span className="text-card-foreground">{platform.name}</span>
+                    <span className="text-gray-700">{platform.name}</span>
                   </a>
                 ))}
               </div>
             </div>
 
-            <div className="bg-card p-6 rounded-xl shadow-sm border">
+            <div className="bg-white p-6 rounded-xl shadow-sm">
               <h3 className="text-lg font-semibold mb-4">Our Location</h3>
               <div className="aspect-video rounded-lg overflow-hidden">
                 <iframe
