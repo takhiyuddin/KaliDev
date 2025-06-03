@@ -158,15 +158,6 @@ export default function GetStarted() {
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <h3 className="text-lg font-semibold mb-4">Our Location</h3>
               <div className="aspect-video rounded-lg overflow-hidden">
-                <iframe
-                  src=""
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen={true}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
               </div>
             </div>
           </div>
