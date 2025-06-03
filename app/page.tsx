@@ -82,7 +82,7 @@ export default function Home() {
       position: "CTO, TechVision Inc.",
       company: "TechVision Inc.",
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
-      quote: "KaliDev transformed our business with their e-commerce platform. The attention to detail and performance optimization exceeded our expectations. Our conversion rates have increased by 40% since launch.",
+      quote: "Koderupa transformed our business with their e-commerce platform. The attention to detail and performance optimization exceeded our expectations. Our conversion rates have increased by 40% since launch.",
       rating: 5
     },
     {
@@ -90,7 +90,7 @@ export default function Home() {
       position: "Founder, HealthPlus",
       company: "HealthPlus",
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
-      quote: "The healthcare management system KaliDev built for us has revolutionized how we handle patient data. The platform is intuitive, secure, and has significantly improved our operational efficiency.",
+      quote: "The healthcare management system Koderupa built for us has revolutionized how we handle patient data. The platform is intuitive, secure, and has significantly improved our operational efficiency.",
       rating: 5
     },
     {
@@ -98,7 +98,7 @@ export default function Home() {
       position: "Marketing Director, EduLearn",
       company: "EduLearn",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
-      quote: "Our learning management system has received outstanding feedback from both instructors and students. KaliDev delivered a product that was not only beautiful but also incredibly functional and user-friendly.",
+      quote: "Our learning management system has received outstanding feedback from both instructors and students. Koderupa delivered a product that was not only beautiful but also incredibly functional and user-friendly.",
       rating: 5
     },
     {
@@ -106,7 +106,7 @@ export default function Home() {
       position: "CEO, PropertyFinder",
       company: "PropertyFinder",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
-      quote: "The real estate marketplace KaliDev developed for us has completely changed how we connect buyers with sellers. The virtual tour feature has been particularly impressive and has set us apart from competitors.",
+      quote: "The real estate marketplace Koderupa developed for us has completely changed how we connect buyers with sellers. The virtual tour feature has been particularly impressive and has set us apart from competitors.",
       rating: 4
     }
   ];
@@ -182,7 +182,7 @@ export default function Home() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <Link href="/">
-                <span className="text-xl font-bold">KaliDev</span>
+                <span className="text-xl font-bold">Koderupa</span>
               </Link>
             </div>
             <div className="hidden md:block">
@@ -311,7 +311,7 @@ export default function Home() {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Portfolio Projects</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore what you can build with KaliDev's powerful development platform
+              Explore what you can build with Koderupa's powerful development platform
             </p>
           </motion.div>
           
