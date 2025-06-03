@@ -12,60 +12,47 @@ export default function GettingStarted() {
       icon: <Zap className="w-5 h-5" />,
       content: `
         <h3 class="text-xl font-semibold mb-4">Quick Start Guide</h3>
-        <p class="mb-4">Get up and running with KaliDev in minutes. This guide will help you set up your first project and understand the basics of our platform.</p>
+        <p class="mb-4">Get up and running with Koderupa in minutes. This guide will help you set up your first project and understand the basics of our platform.</p>
         <div class="space-y-4">
           <div class="bg-blue-50 p-4 rounded-lg">
-            <h4 class="font-medium mb-2">Step 1: Create an account</h4>
-            <p>Sign up for a KaliDev account to access all our features and tools.</p>
+            <h4 class="font-medium mb-2">Step 1: Project Planning</h4>
+            <p>Define your project requirements and choose the appropriate package that fits your needs.</p>
           </div>
           <div class="bg-blue-50 p-4 rounded-lg">
-            <h4 class="font-medium mb-2">Step 2: Initialize your project</h4>
-            <p>Use our CLI tool to create a new project with a single command.</p>
-            <pre class="bg-gray-800 text-white p-3 rounded mt-2 overflow-x-auto"><code>npx create-kalidev-app my-awesome-project</code></pre>
+            <h4 class="font-medium mb-2">Step 2: Design Phase</h4>
+            <p>Our team will create a custom design based on your brand and requirements.</p>
           </div>
           <div class="bg-blue-50 p-4 rounded-lg">
-            <h4 class="font-medium mb-2">Step 3: Start development</h4>
-            <p>Navigate to your project directory and start the development server.</p>
-            <pre class="bg-gray-800 text-white p-3 rounded mt-2 overflow-x-auto"><code>cd my-awesome-project
-npm run dev</code></pre>
+            <h4 class="font-medium mb-2">Step 3: Development</h4>
+            <p>We'll build your website using modern technologies and best practices.</p>
           </div>
         </div>
       `
     },
     {
-      title: "Installation",
+      title: "Our Process",
       icon: <Terminal className="w-5 h-5" />,
       content: `
-        <h3 class="text-xl font-semibold mb-4">Installation</h3>
-        <p class="mb-4">Follow these steps to install KaliDev on your system.</p>
+        <h3 class="text-xl font-semibold mb-4">Our Development Process</h3>
+        <p class="mb-4">We follow a structured approach to ensure the highest quality results for your project.</p>
         
-        <h4 class="font-medium mb-2">System Requirements</h4>
+        <h4 class="font-medium mb-2">Development Phases</h4>
         <ul class="list-disc pl-5 mb-4 space-y-1">
-          <li>Node.js 16.x or later</li>
-          <li>npm 7.x or later</li>
-          <li>Git (optional, but recommended)</li>
+          <li>Requirements gathering and analysis</li>
+          <li>UI/UX design and prototyping</li>
+          <li>Frontend and backend development</li>
+          <li>Quality assurance and testing</li>
+          <li>Deployment and maintenance</li>
         </ul>
         
-        <h4 class="font-medium mb-2">Installation Methods</h4>
-        
-        <div class="mb-4">
-          <h5 class="font-medium">Using npm (recommended)</h5>
-          <pre class="bg-gray-800 text-white p-3 rounded mt-2 overflow-x-auto"><code>npm install -g kalidev-cli</code></pre>
-        </div>
-        
-        <div class="mb-4">
-          <h5 class="font-medium">Using yarn</h5>
-          <pre class="bg-gray-800 text-white p-3 rounded mt-2 overflow-x-auto"><code>yarn global add kalidev-cli</code></pre>
-        </div>
-        
-        <div>
-          <h5 class="font-medium">Manual Installation</h5>
-          <p class="mt-1">Clone the repository and install dependencies:</p>
-          <pre class="bg-gray-800 text-white p-3 rounded mt-2 overflow-x-auto"><code>git clone https://github.com/kalidev/kalidev-cli.git
-cd kalidev-cli
-npm install
-npm link</code></pre>
-        </div>
+        <h4 class="font-medium mb-2">Quality Standards</h4>
+        <ul class="list-disc pl-5 mb-4 space-y-1">
+          <li>Clean, maintainable code</li>
+          <li>Responsive design for all devices</li>
+          <li>Performance optimization</li>
+          <li>Security best practices</li>
+          <li>SEO optimization</li>
+        </ul>
       `
     },
     {
@@ -73,32 +60,32 @@ npm link</code></pre>
       icon: <BookOpen className="w-5 h-5" />,
       content: `
         <h3 class="text-xl font-semibold mb-4">Basic Concepts</h3>
-        <p class="mb-6">Understanding these core concepts will help you make the most of KaliDev's platform.</p>
+        <p class="mb-6">Understanding these core concepts will help you make informed decisions about your project.</p>
         
         <div class="space-y-6">
           <div>
-            <h4 class="font-medium mb-2 text-lg">Projects</h4>
-            <p>A project is the top-level container for all your code, assets, and configurations. Each project has its own settings and can be deployed independently.</p>
+            <h4 class="font-medium mb-2 text-lg">Responsive Design</h4>
+            <p>Your website will adapt seamlessly to all screen sizes, ensuring a consistent experience across devices.</p>
           </div>
           
           <div>
-            <h4 class="font-medium mb-2 text-lg">Components</h4>
-            <p>Components are reusable building blocks that make up your application. KaliDev provides a library of pre-built components that you can customize and extend.</p>
+            <h4 class="font-medium mb-2 text-lg">Performance</h4>
+            <p>We optimize your website for speed and efficiency, ensuring fast load times and smooth interactions.</p>
           </div>
           
           <div>
-            <h4 class="font-medium mb-2 text-lg">Services</h4>
-            <p>Services handle the business logic of your application. They can be connected to various data sources and APIs to provide functionality to your components.</p>
+            <h4 class="font-medium mb-2 text-lg">Security</h4>
+            <p>Built-in security measures protect your website and user data from common threats and vulnerabilities.</p>
           </div>
           
           <div>
-            <h4 class="font-medium mb-2 text-lg">Deployments</h4>
-            <p>Deployments are instances of your project that are running in a specific environment. KaliDev supports multiple deployment environments, such as development, staging, and production.</p>
+            <h4 class="font-medium mb-2 text-lg">SEO</h4>
+            <p>Search engine optimization helps your website rank better in search results and attract more visitors.</p>
           </div>
           
           <div>
-            <h4 class="font-medium mb-2 text-lg">Workspaces</h4>
-            <p>Workspaces allow you to organize multiple projects and share resources between them. They're especially useful for larger teams or organizations.</p>
+            <h4 class="font-medium mb-2 text-lg">Maintenance</h4>
+            <p>Regular updates and support ensure your website stays secure and performs optimally.</p>
           </div>
         </div>
       `
@@ -121,7 +108,7 @@ npm link</code></pre>
         >
           <h1 className="text-4xl font-bold mb-8">Getting Started</h1>
           <p className="text-xl text-gray-600 mb-12">
-            Everything you need to know to begin your journey with KaliDev
+            Everything you need to know to begin your journey with Koderupa
           </p>
         </motion.div>
 
@@ -151,7 +138,7 @@ npm link</code></pre>
             <h3 className="text-xl font-semibold">Ready to dive deeper?</h3>
           </div>
           <p className="mb-6">
-            Now that you understand the basics, explore our other documentation sections to learn more about KaliDev's powerful features.
+            Now that you understand the basics, explore our other documentation sections to learn more about Koderupa's services.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Link href="/documentation">
