@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Code2, FolderKanban, BarChart, MessageSquare, Smartphone, Globe, Database, Server, Headphones, Wrench, Palette, Shield, Cloud, LineChart, Zap, Laptop, FileText, Image, Video, Users, ShoppingCart, Layers, Cpu, BookOpen, Map, PieChart, Briefcase, Lightbulb, Menu, X, Star, Quote } from "lucide-react";
+import { ArrowRight, Code2, FolderKanban, BarChart, MessageSquare, Smartphone, Globe, Database, Server, Headphones, Wrench, Palette, Shield, Cloud, LineChart, Zap, Laptop, FileText, Image, Video, Users, ShoppingCart, Layers, Cpu, BookOpen, Map, PieChart, Briefcase, Lightbulb, Menu, X, Star, Quote, ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useState } from "react";
@@ -73,6 +73,69 @@ export default function Home() {
       title: "IoT Control Dashboard",
       description: "Centralized management system for connected devices and sensors.",
       tags: ["Vue.js", "MQTT", "WebSockets"]
+    }
+  ];
+
+  const majorProjects = [
+    {
+      title: "Enterprise Resource Planning System",
+      description: "Comprehensive ERP solution for manufacturing companies with inventory management, production planning, and financial reporting modules.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      technologies: ["React", "Node.js", "PostgreSQL", "Redis", "Docker"],
+      features: ["Real-time Analytics", "Multi-tenant Architecture", "API Integration", "Advanced Security"],
+      liveUrl: "#",
+      githubUrl: "#",
+      category: "Enterprise Software"
+    },
+    {
+      title: "AI-Powered Content Management Platform",
+      description: "Next-generation CMS with AI-driven content optimization, automated SEO suggestions, and intelligent content categorization.",
+      image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      technologies: ["Next.js", "Python", "TensorFlow", "MongoDB", "AWS"],
+      features: ["AI Content Analysis", "Auto-SEO Optimization", "Multi-language Support", "Cloud Storage"],
+      liveUrl: "#",
+      githubUrl: "#",
+      category: "AI & Machine Learning"
+    },
+    {
+      title: "Blockchain-Based Supply Chain Tracker",
+      description: "Transparent supply chain management system using blockchain technology to track products from origin to consumer.",
+      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      technologies: ["Solidity", "Web3.js", "React", "Node.js", "IPFS"],
+      features: ["Blockchain Integration", "Smart Contracts", "QR Code Tracking", "Immutable Records"],
+      liveUrl: "#",
+      githubUrl: "#",
+      category: "Blockchain"
+    },
+    {
+      title: "Real-Time Collaboration Platform",
+      description: "Advanced team collaboration tool with video conferencing, document sharing, project management, and real-time editing capabilities.",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      technologies: ["Vue.js", "WebRTC", "Socket.io", "Express", "MongoDB"],
+      features: ["Video Conferencing", "Real-time Editing", "File Sharing", "Project Management"],
+      liveUrl: "#",
+      githubUrl: "#",
+      category: "Collaboration Tools"
+    },
+    {
+      title: "IoT Smart City Dashboard",
+      description: "Comprehensive smart city management system integrating traffic monitoring, environmental sensors, and public services optimization.",
+      image: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      technologies: ["Angular", "Python", "InfluxDB", "Grafana", "MQTT"],
+      features: ["Real-time Monitoring", "Predictive Analytics", "Alert System", "Data Visualization"],
+      liveUrl: "#",
+      githubUrl: "#",
+      category: "IoT & Smart Systems"
+    },
+    {
+      title: "Advanced E-Learning Platform",
+      description: "Comprehensive online education platform with adaptive learning algorithms, virtual classrooms, and progress tracking.",
+      image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      technologies: ["React", "Django", "PostgreSQL", "WebRTC", "AWS"],
+      features: ["Adaptive Learning", "Virtual Classrooms", "Progress Analytics", "Mobile App"],
+      liveUrl: "#",
+      githubUrl: "#",
+      category: "Education Technology"
     }
   ];
 
@@ -353,8 +416,93 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Major Projects Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Major Projects</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Showcasing our most impactful and innovative solutions across various industries
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {majorProjects.map((project, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+              >
+                <div className="relative h-64 overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      {project.category}
+                    </span>
+                  </div>
+                </div>
+                
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">{project.description}</p>
+                  
+                  <div className="mb-6">
+                    <h4 className="font-semibold mb-3 text-gray-800">Key Features</h4>
+                    <div className="grid grid-cols-2 gap-2">
+                      {project.features.map((feature, i) => (
+                        <div key={i} className="flex items-center text-sm text-gray-600">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="mb-6">
+                    <h4 className="font-semibold mb-3 text-gray-800">Technologies Used</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, i) => (
+                        <span key={i} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="flex gap-4">
+                    <Button variant="outline" className="flex-1" asChild>
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Live Demo
+                      </a>
+                    </Button>
+                    <Button variant="outline" className="flex-1" asChild>
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-2" />
+                        Source Code
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -375,7 +523,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow relative"
+                className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow relative"
               >
                 <div className="absolute top-6 right-6 text-blue-500">
                   <Quote className="w-10 h-10 opacity-20" />
