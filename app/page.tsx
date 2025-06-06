@@ -171,6 +171,70 @@ export default function Home() {
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
       quote: "The real estate marketplace Koderupa developed for us has completely changed how we connect buyers with sellers. The virtual tour feature has been particularly impressive and has set us apart from competitors.",
       rating: 4
+    },
+    {
+      name: "Lisa Thompson",
+      position: "Operations Manager, LogiFlow",
+      company: "LogiFlow",
+      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
+      quote: "The supply chain management system has given us complete visibility into our operations. Real-time tracking and analytics have helped us reduce costs by 25% and improve delivery times significantly.",
+      rating: 5
+    },
+    {
+      name: "James Wilson",
+      position: "CTO, FinanceFlow",
+      company: "FinanceFlow",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
+      quote: "Koderupa's fintech solution exceeded all our security and compliance requirements. The payment processing system handles thousands of transactions daily without any issues. Exceptional work!",
+      rating: 5
+    },
+    {
+      name: "Rachel Green",
+      position: "Head of Digital, RetailMax",
+      company: "RetailMax",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
+      quote: "The mobile app suite Koderupa created for our retail chain has transformed our customer experience. Push notifications and loyalty features have increased customer engagement by 60%.",
+      rating: 5
+    },
+    {
+      name: "Alex Kumar",
+      position: "Founder, SmartCity Solutions",
+      company: "SmartCity Solutions",
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
+      quote: "The IoT dashboard platform has revolutionized how we manage smart city infrastructure. Real-time monitoring and predictive analytics have helped us prevent issues before they occur.",
+      rating: 5
+    },
+    {
+      name: "Maria Santos",
+      position: "Director of Technology, EcoGreen",
+      company: "EcoGreen",
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
+      quote: "Working with Koderupa on our environmental monitoring platform was fantastic. Their expertise in data visualization and real-time processing helped us create a tool that's both powerful and easy to use.",
+      rating: 4
+    },
+    {
+      name: "Robert Taylor",
+      position: "VP Engineering, CloudTech",
+      company: "CloudTech",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
+      quote: "The enterprise collaboration platform has streamlined our remote work processes. Video conferencing integration and real-time document editing have made our team 40% more productive.",
+      rating: 5
+    },
+    {
+      name: "Jennifer Lee",
+      position: "Product Manager, InnovateLab",
+      company: "InnovateLab",
+      image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
+      quote: "Koderupa's AI-powered content management system has automated so many of our manual processes. The intelligent categorization and SEO optimization features have saved us countless hours.",
+      rating: 5
+    },
+    {
+      name: "Thomas Anderson",
+      position: "CEO, BlockChain Ventures",
+      company: "BlockChain Ventures",
+      image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
+      quote: "The blockchain supply chain solution has brought unprecedented transparency to our operations. Smart contracts and immutable records have built trust with our partners and customers.",
+      rating: 5
     }
   ];
 
@@ -516,7 +580,7 @@ export default function Home() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -526,19 +590,19 @@ export default function Home() {
                 className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow relative"
               >
                 <div className="absolute top-6 right-6 text-blue-500">
-                  <Quote className="w-10 h-10 opacity-20" />
+                  <Quote className="w-8 h-8 opacity-20" />
                 </div>
                 <div className="flex items-start mb-6">
                   <div className="mr-4">
                     <img 
                       src={testimonial.image} 
                       alt={testimonial.name} 
-                      className="w-16 h-16 rounded-full object-cover"
+                      className="w-12 h-12 rounded-full object-cover"
                     />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold">{testimonial.name}</h3>
-                    <p className="text-gray-600">{testimonial.position}</p>
+                    <p className="text-gray-600 text-sm">{testimonial.position}</p>
                     <div className="flex mt-1">
                       {[...Array(5)].map((_, i) => (
                         <Star 
@@ -549,7 +613,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <p className="text-gray-700 italic">"{testimonial.quote}"</p>
+                <p className="text-gray-700 italic text-sm leading-relaxed">"{testimonial.quote}"</p>
               </motion.div>
             ))}
           </div>
