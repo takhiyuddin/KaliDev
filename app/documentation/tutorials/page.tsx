@@ -14,15 +14,15 @@ export default function Tutorials() {
         <>
           <h3 className="text-xl font-semibold mb-4">Building Your First App</h3>
           <p className="mb-4">
-            Follow this step-by-step tutorial to build your first application with KaliDev.
+            Follow this step-by-step tutorial to build your first application with Koderupa.
           </p>
 
           <div className="space-y-6">
             <div>
               <h4 className="font-medium mb-2">Step 1: Set Up Your Project</h4>
-              <p className="mb-2">Create a new KaliDev project using our CLI tool:</p>
+              <p className="mb-2">Create a new Koderupa project using our CLI tool:</p>
               <pre className="bg-gray-800 text-white p-3 rounded mt-2 overflow-x-auto">
-                <code>npx create-kalidev-app my-first-app{`\n`}cd my-first-app</code>
+                <code>npx create-Koderupa-app my-first-app{`\n`}cd my-first-app</code>
               </pre>
             </div>
 
@@ -30,7 +30,7 @@ export default function Tutorials() {
               <h4 className="font-medium mb-2">Step 2: Configure Authentication</h4>
               <p className="mb-2">Set up authentication for your application:</p>
               <pre className="bg-gray-800 text-white p-3 rounded mt-2 overflow-x-auto">
-                <code>{`// src/auth.js\nimport { KaliAuth } from '@kalidev/auth';\n\nexport const auth = new KaliAuth({\n  apiKey: process.env.KALIDEV_API_KEY,\n  authDomain: 'your-app.kalidev.com'\n});`}</code>
+                <code>{`// src/auth.js\nimport { KaliAuth } from '@Koderupa/auth';\n\nexport const auth = new KaliAuth({\n  apiKey: process.env.Koderupa_API_KEY,\n  authDomain: 'your-app.Koderupa.com'\n});`}</code>
               </pre>
             </div>
           </div>
@@ -43,7 +43,7 @@ export default function Tutorials() {
       content: (
         <>
           <h3 className="text-xl font-semibold mb-4">Deployment</h3>
-          <p className="mb-4">Learn how to deploy your KaliDev application to production.</p>
+          <p className="mb-4">Learn how to deploy your Koderupa application to production.</p>
 
           <div className="space-y-6">
             <div>
@@ -53,7 +53,7 @@ export default function Tutorials() {
                 <li>Set up environment variables for production</li>
                 <li>Run tests to ensure everything works correctly</li>
                 <li>Optimize your application for production</li>
-                <li>Configure your deployment settings in <code>kalidev.config.js</code></li>
+                <li>Configure your deployment settings in <code>Koderupa.config.js</code></li>
               </ul>
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function Tutorials() {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           <h1 className="text-4xl font-bold mb-8">Tutorials</h1>
           <p className="text-xl text-gray-600 mb-12">
-            Step-by-step guides to help you build amazing applications with KaliDev
+            Step-by-step guides to help you build amazing applications with Koderupa
           </p>
         </motion.div>
 

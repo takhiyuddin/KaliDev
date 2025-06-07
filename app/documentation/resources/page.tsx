@@ -12,7 +12,7 @@ export default function Resources() {
       icon: <Code2 className="w-5 h-5" />,
       content: `
         <h3 class="text-xl font-semibold mb-4">Examples</h3>
-        <p class="mb-4">Explore these example projects to learn how to implement common features and patterns with KaliDev.</p>
+        <p class="mb-4">Explore these example projects to learn how to implement common features and patterns with Koderupa.</p>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           <div class="bg-white border rounded-lg p-4">
@@ -80,7 +80,7 @@ export default function Resources() {
       icon: <HelpCircle className="w-5 h-5" />,
       content: `
         <h3 class="text-xl font-semibold mb-4">Frequently Asked Questions</h3>
-        <p class="mb-4">Find answers to common questions about KaliDev.</p>
+        <p class="mb-4">Find answers to common questions about Koderupa.</p>
         
         <div class="space-y-6">
           <div>
@@ -88,18 +88,18 @@ export default function Resources() {
             
             <div class="space-y-4">
               <div class="bg-gray-50 p-4 rounded-lg">
-                <h5 class="font-medium mb-2">What is KaliDev?</h5>
-                <p>KaliDev is a modern development platform that provides tools and services for building web and mobile applications. It includes authentication, database, storage, and other features to help developers build applications faster.</p>
+                <h5 class="font-medium mb-2">What is Koderupa?</h5>
+                <p>Koderupa is a modern development platform that provides tools and services for building web and mobile applications. It includes authentication, database, storage, and other features to help developers build applications faster.</p>
               </div>
               
               <div class="bg-gray-50 p-4 rounded-lg">
-                <h5 class="font-medium mb-2">Is KaliDev free to use?</h5>
-                <p>KaliDev offers a free tier for development and small projects. For production applications and larger teams, we offer paid plans with additional features and higher usage limits. See our <a href="/pricing" class="text-blue-600 hover:underline">pricing page</a> for details.</p>
+                <h5 class="font-medium mb-2">Is Koderupa free to use?</h5>
+                <p>Koderupa offers a free tier for development and small projects. For production applications and larger teams, we offer paid plans with additional features and higher usage limits. See our <a href="/pricing" class="text-blue-600 hover:underline">pricing page</a> for details.</p>
               </div>
               
               <div class="bg-gray-50 p-4 rounded-lg">
-                <h5 class="font-medium mb-2">Can I use KaliDev with my existing project?</h5>
-                <p>Yes, KaliDev can be integrated with existing projects. Our SDKs and APIs are designed to work with any JavaScript framework or library. You can start by adding individual features like authentication or database to your project.</p>
+                <h5 class="font-medium mb-2">Can I use Koderupa with my existing project?</h5>
+                <p>Yes, Koderupa can be integrated with existing projects. Our SDKs and APIs are designed to work with any JavaScript framework or library. You can start by adding individual features like authentication or database to your project.</p>
               </div>
             </div>
           </div>
@@ -110,17 +110,17 @@ export default function Resources() {
             <div class="space-y-4">
               <div class="bg-gray-50 p-4 rounded-lg">
                 <h5 class="font-medium mb-2">How do I handle user authentication?</h5>
-                <p>KaliDev provides a complete authentication system that supports email/password, social login, and other authentication methods. You can use our authentication SDK to handle user sign-up, login, and session management. See the <a href="/documentation/core-features" class="text-blue-600 hover:underline">Authentication documentation</a> for details.</p>
+                <p>Koderupa provides a complete authentication system that supports email/password, social login, and other authentication methods. You can use our authentication SDK to handle user sign-up, login, and session management. See the <a href="/documentation/core-features" class="text-blue-600 hover:underline">Authentication documentation</a> for details.</p>
               </div>
               
               <div class="bg-gray-50 p-4 rounded-lg">
-                <h5 class="font-medium mb-2">How do I deploy my KaliDev application?</h5>
-                <p>KaliDev offers multiple deployment options. You can deploy to our managed cloud platform with a single command, or build your application for deployment to your own server or cloud provider. See the <a href="/documentation/tutorials" class="text-blue-600 hover:underline">Deployment tutorial</a> for step-by-step instructions.</p>
+                <h5 class="font-medium mb-2">How do I deploy my Koderupa application?</h5>
+                <p>Koderupa offers multiple deployment options. You can deploy to our managed cloud platform with a single command, or build your application for deployment to your own server or cloud provider. See the <a href="/documentation/tutorials" class="text-blue-600 hover:underline">Deployment tutorial</a> for step-by-step instructions.</p>
               </div>
               
               <div class="bg-gray-50 p-4 rounded-lg">
-                <h5 class="font-medium mb-2">Does KaliDev support offline data?</h5>
-                <p>Yes, KaliDev's database solution includes built-in support for offline data. Your application can work offline and automatically sync data when the connection is restored. This is especially useful for mobile applications and progressive web apps.</p>
+                <h5 class="font-medium mb-2">Does Koderupa support offline data?</h5>
+                <p>Yes, Koderupa's database solution includes built-in support for offline data. Your application can work offline and automatically sync data when the connection is restored. This is especially useful for mobile applications and progressive web apps.</p>
               </div>
             </div>
           </div>
@@ -132,7 +132,7 @@ export default function Resources() {
       icon: <AlertTriangle className="w-5 h-5" />,
       content: `
         <h3 class="text-xl font-semibold mb-4">Troubleshooting</h3>
-        <p class="mb-4">Solutions to common issues and errors you might encounter when using KaliDev.</p>
+        <p class="mb-4">Solutions to common issues and errors you might encounter when using Koderupa.</p>
         
         <div class="space-y-6">
           <div>
@@ -145,7 +145,7 @@ export default function Resources() {
                 <p class="font-medium mt-2">Solution:</p>
                 <ul class="list-disc pl-5 space-y-1">
                   <li>Check that you've correctly set the API key in your environment variables</li>
-                  <li>Verify that the API key is valid in the KaliDev dashboard</li>
+                  <li>Verify that the API key is valid in the Koderupa dashboard</li>
                   <li>Generate a new API key if necessary</li>
                 </ul>
               </div>
@@ -245,7 +245,7 @@ const getDocument = async (id) => {
         >
           <h1 className="text-4xl font-bold mb-8">Resources</h1>
           <p className="text-xl text-gray-600 mb-12">
-            Additional resources to help you make the most of KaliDev
+            Additional resources to help you make the most of Koderupa
           </p>
         </motion.div>
 
