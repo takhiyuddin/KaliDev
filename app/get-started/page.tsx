@@ -58,7 +58,7 @@ ${formData.message}
     },
     { 
       name: "TikTok", 
-      icon: <svg className="w-6 h-6\" viewBox="0 0 24 24\" fill="none\" xmlns="http://www.w3.org/2000/svg"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z\" fill="currentColor"/></svg>, 
+      icon: <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" fill="currentColor"/></svg>, 
       url: "https://tiktok.com/@tqydns",
       handle: "@tqydns",
       color: "green"
@@ -112,28 +112,28 @@ ${formData.message}
         hover: 'hover:bg-blue-50 hover:border-blue-300'
       },
       green: {
-        bg: 'from-green-500 to-green-600',
-        bgLight: 'from-green-50 to-green-100',
-        text: 'text-green-600',
-        border: 'border-green-200',
-        hover: 'hover:bg-green-50 hover:border-green-300'
+        bg: 'from-emerald-500 to-emerald-600',
+        bgLight: 'from-emerald-50 to-emerald-100',
+        text: 'text-emerald-600',
+        border: 'border-emerald-200',
+        hover: 'hover:bg-emerald-50 hover:border-emerald-300'
       },
       yellow: {
-        bg: 'from-yellow-500 to-yellow-600',
-        bgLight: 'from-yellow-50 to-yellow-100',
-        text: 'text-yellow-600',
-        border: 'border-yellow-200',
-        hover: 'hover:bg-yellow-50 hover:border-yellow-300'
+        bg: 'from-amber-500 to-amber-600',
+        bgLight: 'from-amber-50 to-amber-100',
+        text: 'text-amber-600',
+        border: 'border-amber-200',
+        hover: 'hover:bg-amber-50 hover:border-amber-300'
       }
     };
     return colorMap[color as keyof typeof colorMap] || colorMap.blue;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50/30">
+    <div className="min-h-screen professional-gradient">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24">
         <Link href="/">
-          <Button variant="ghost" className="mb-8 text-gray-600 hover:text-blue-600">
+          <Button variant="ghost" className="mb-8 text-slate-600 hover:text-blue-600">
             <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
           </Button>
         </Link>
@@ -146,11 +146,11 @@ ${formData.message}
         >
           <h1 className="text-4xl lg:text-6xl font-bold text-gradient mb-6">
             Let's Build Something
-            <span className="block bg-gradient-to-r from-blue-600 via-green-600 to-yellow-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-blue-600 via-emerald-600 to-amber-600 bg-clip-text text-transparent">
               Amazing Together
             </span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Ready to transform your digital presence? Get in touch with our team of experts 
             and let's discuss how we can bring your vision to life.
           </p>
@@ -166,15 +166,15 @@ ${formData.message}
           {contactMethods.map((method, index) => {
             const colors = getColorClasses(method.color);
             return (
-              <div key={index} className={`bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border ${colors.border} text-center group`}>
+              <div key={index} className={`bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border ${colors.border} text-center group elegant-hover`}>
                 <div className={`w-16 h-16 bg-gradient-to-br ${colors.bg} rounded-2xl flex items-center justify-center text-white mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   {method.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-900">{method.title}</h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">{method.description}</p>
+                <h3 className="text-xl font-semibold mb-3 text-slate-900">{method.title}</h3>
+                <p className="text-slate-600 mb-4 leading-relaxed">{method.description}</p>
                 <p className={`font-semibold ${colors.text} mb-6`}>{method.value}</p>
                 <Button 
-                  className={`w-full bg-gradient-to-r ${colors.bg} hover:shadow-lg text-white`}
+                  className={`w-full bg-gradient-to-r ${colors.bg} hover:shadow-lg text-white btn-modern`}
                   asChild
                 >
                   <a href={method.link} target="_blank" rel="noopener noreferrer">
@@ -193,17 +193,17 @@ ${formData.message}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+            <div className="bg-white p-8 rounded-2xl shadow-xl border border-slate-100 modern-shadow">
               <div className="flex items-center mb-8">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-green-600 rounded-xl flex items-center justify-center text-white mr-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-emerald-600 rounded-xl flex items-center justify-center text-white mr-4">
                   <Send className="w-6 h-6" />
                 </div>
-                <h2 className="text-2xl font-bold text-gray-900">Send us a Message</h2>
+                <h2 className="text-2xl font-bold text-slate-900">Send us a Message</h2>
               </div>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">
                     Your Name *
                   </label>
                   <input
@@ -212,14 +212,14 @@ ${formData.message}
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                     placeholder="Enter your full name"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">
                     Email Address *
                   </label>
                   <input
@@ -228,14 +228,14 @@ ${formData.message}
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                     placeholder="Enter your email address"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="subject" className="block text-sm font-semibold text-slate-700 mb-2">
                     Subject *
                   </label>
                   <input
@@ -244,14 +244,14 @@ ${formData.message}
                     name="subject"
                     value={formData.subject}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                     placeholder="What's this about?"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-2">
                     Message *
                   </label>
                   <textarea
@@ -260,7 +260,7 @@ ${formData.message}
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
                     placeholder="Tell us about your project or question..."
                     required
                   ></textarea>
@@ -269,7 +269,7 @@ ${formData.message}
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="w-full bg-gradient-to-r from-blue-500 via-green-500 to-yellow-500 hover:from-blue-600 hover:via-green-600 hover:to-yellow-600 text-white py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="w-full bg-gradient-to-r from-blue-500 via-emerald-500 to-amber-500 hover:from-blue-600 hover:via-emerald-600 hover:to-amber-600 text-white py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 btn-modern"
                 >
                   <Send className="w-5 h-5 mr-2" />
                   Send Message
@@ -286,8 +286,8 @@ ${formData.message}
             className="space-y-8"
           >
             {/* Contact Details */}
-            <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
-              <h3 className="text-2xl font-bold mb-8 text-gray-900">Contact Information</h3>
+            <div className="bg-white p-8 rounded-2xl shadow-xl border border-slate-100 modern-shadow">
+              <h3 className="text-2xl font-bold mb-8 text-slate-900">Contact Information</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start">
@@ -295,8 +295,8 @@ ${formData.message}
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold mb-2 text-gray-900">Location</h4>
-                    <p className="text-gray-600 leading-relaxed">
+                    <h4 className="text-lg font-semibold mb-2 text-slate-900">Location</h4>
+                    <p className="text-slate-600 leading-relaxed">
                       Boyolali, Central Java<br />
                       Indonesia
                     </p>
@@ -304,22 +304,22 @@ ${formData.message}
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center text-green-600 mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-xl flex items-center justify-center text-emerald-600 mr-4">
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold mb-2 text-gray-900">Phone Number</h4>
-                    <p className="text-gray-600">+62 895 3240 73524</p>
+                    <h4 className="text-lg font-semibold mb-2 text-slate-900">Phone Number</h4>
+                    <p className="text-slate-600">+62 895 3240 73524</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-xl flex items-center justify-center text-yellow-600 mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-amber-100 to-amber-200 rounded-xl flex items-center justify-center text-amber-600 mr-4">
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold mb-2 text-gray-900">Email</h4>
-                    <p className="text-gray-600">afiftqydns@gmail.com</p>
+                    <h4 className="text-lg font-semibold mb-2 text-slate-900">Email</h4>
+                    <p className="text-slate-600">afiftqydns@gmail.com</p>
                   </div>
                 </div>
 
@@ -328,8 +328,8 @@ ${formData.message}
                     <Clock className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold mb-2 text-gray-900">Operating Hours</h4>
-                    <p className="text-gray-600">
+                    <h4 className="text-lg font-semibold mb-2 text-slate-900">Operating Hours</h4>
+                    <p className="text-slate-600">
                       Monday - Sunday<br />
                       09:00 - 22:00 WIB
                     </p>
@@ -339,12 +339,12 @@ ${formData.message}
             </div>
 
             {/* Social Media */}
-            <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+            <div className="bg-white p-8 rounded-2xl shadow-xl border border-slate-100 modern-shadow">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-green-600 rounded-xl flex items-center justify-center text-white mr-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-emerald-600 rounded-xl flex items-center justify-center text-white mr-4">
                   <Globe className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">Follow Us</h3>
+                <h3 className="text-2xl font-bold text-slate-900">Follow Us</h3>
               </div>
               
               <div className="space-y-4">
@@ -362,8 +362,8 @@ ${formData.message}
                         {platform.icon}
                       </div>
                       <div>
-                        <span className="font-semibold text-gray-900 block">{platform.name}</span>
-                        <span className="text-gray-600 text-sm">{platform.handle}</span>
+                        <span className="font-semibold text-slate-900 block">{platform.name}</span>
+                        <span className="text-slate-600 text-sm">{platform.handle}</span>
                       </div>
                     </a>
                   );
@@ -372,33 +372,33 @@ ${formData.message}
             </div>
 
             {/* Why Choose Us */}
-            <div className="bg-gradient-to-br from-blue-50 via-green-50 to-yellow-50 p-8 rounded-2xl border border-blue-100">
+            <div className="bg-gradient-to-br from-blue-50 via-emerald-50 to-amber-50 p-8 rounded-2xl border border-blue-100">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-green-600 rounded-xl flex items-center justify-center text-white mr-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-emerald-600 rounded-xl flex items-center justify-center text-white mr-4">
                   <Award className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">Why Choose Koderupa?</h3>
+                <h3 className="text-2xl font-bold text-slate-900">Why Choose Koderupa?</h3>
               </div>
               
               <ul className="space-y-3">
-                <li className="flex items-center text-gray-700">
+                <li className="flex items-center text-slate-700">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
                   500+ Successful Projects Delivered
                 </li>
-                <li className="flex items-center text-gray-700">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                <li className="flex items-center text-slate-700">
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full mr-3"></div>
                   98% Client Satisfaction Rate
                 </li>
-                <li className="flex items-center text-gray-700">
-                  <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></div>
+                <li className="flex items-center text-slate-700">
+                  <div className="w-2 h-2 bg-amber-500 rounded-full mr-3"></div>
                   24/7 Support & Maintenance
                 </li>
-                <li className="flex items-center text-gray-700">
+                <li className="flex items-center text-slate-700">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
                   Modern Technology Stack
                 </li>
-                <li className="flex items-center text-gray-700">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                <li className="flex items-center text-slate-700">
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full mr-3"></div>
                   Transparent Pricing
                 </li>
               </ul>

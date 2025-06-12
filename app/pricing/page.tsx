@@ -222,28 +222,28 @@ Transaction ID: TXN${Date.now()}
         bgLight: 'bg-blue-50'
       },
       green: {
-        bg: 'from-green-500 to-green-600',
-        border: 'border-green-200',
-        ring: 'ring-green-100',
-        text: 'text-green-600',
-        bgLight: 'bg-green-50'
+        bg: 'from-emerald-500 to-emerald-600',
+        border: 'border-emerald-200',
+        ring: 'ring-emerald-100',
+        text: 'text-emerald-600',
+        bgLight: 'bg-emerald-50'
       },
       yellow: {
-        bg: 'from-yellow-500 to-yellow-600',
-        border: 'border-yellow-200',
-        ring: 'ring-yellow-100',
-        text: 'text-yellow-600',
-        bgLight: 'bg-yellow-50'
+        bg: 'from-amber-500 to-amber-600',
+        border: 'border-amber-200',
+        ring: 'ring-amber-100',
+        text: 'text-amber-600',
+        bgLight: 'bg-amber-50'
       }
     };
     return colorMap[color as keyof typeof colorMap] || colorMap.blue;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50/30">
+    <div className="min-h-screen professional-gradient">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24">
         <Link href="/">
-          <Button variant="ghost" className="mb-8 text-gray-600 hover:text-blue-600">
+          <Button variant="ghost" className="mb-8 text-slate-600 hover:text-blue-600">
             <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
           </Button>
         </Link>
@@ -254,15 +254,15 @@ Transaction ID: TXN${Date.now()}
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-100 via-green-100 to-yellow-100 rounded-full text-sm font-medium text-gray-700 mb-6 border border-blue-200/50">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-100 via-emerald-100 to-amber-100 rounded-full text-sm font-medium text-slate-700 mb-6 border border-blue-200/50 modern-shadow">
             <Sparkles className="w-4 h-4 mr-2 text-blue-500" />
             Limited Time Offer - Save up to 30%
-            <Heart className="w-4 h-4 ml-2 text-green-500" />
+            <Heart className="w-4 h-4 ml-2 text-emerald-500" />
           </div>
           <h1 className="text-4xl lg:text-6xl font-bold text-gradient mb-6">
             Choose Your Perfect Plan
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Transparent pricing with no hidden fees. Start your project today and transform your digital presence.
           </p>
         </motion.div>
@@ -280,8 +280,8 @@ Transaction ID: TXN${Date.now()}
                   className={`relative bg-white rounded-3xl shadow-xl border-2 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 ${
                     plan.popular 
                       ? `${colors.border} ring-4 ${colors.ring}` 
-                      : 'border-gray-200 hover:border-gray-300'
-                  }`}
+                      : 'border-slate-200 hover:border-slate-300'
+                  } elegant-hover`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -297,19 +297,19 @@ Transaction ID: TXN${Date.now()}
                       <div className={`w-16 h-16 bg-gradient-to-r ${colors.bg} rounded-2xl flex items-center justify-center text-white mx-auto mb-4 shadow-lg`}>
                         {plan.icon}
                       </div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                      <p className="text-gray-600 mb-6">{plan.description}</p>
+                      <h3 className="text-2xl font-bold text-slate-900 mb-2">{plan.name}</h3>
+                      <p className="text-slate-600 mb-6">{plan.description}</p>
                       
                       <div className="flex items-center justify-center mb-6">
-                        <span className="text-gray-400 line-through text-lg mr-2">{plan.originalPrice}</span>
-                        <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
+                        <span className="text-slate-400 line-through text-lg mr-2">{plan.originalPrice}</span>
+                        <span className="text-4xl font-bold text-slate-900">{plan.price}</span>
                       </div>
                       
                       <Button 
                         className={`w-full py-3 text-lg font-semibold transition-all duration-300 ${
                           plan.popular
-                            ? `bg-gradient-to-r ${colors.bg} hover:shadow-lg text-white shadow-lg`
-                            : 'bg-gray-900 hover:bg-gray-800 text-white'
+                            ? `bg-gradient-to-r ${colors.bg} hover:shadow-lg text-white shadow-lg btn-modern`
+                            : 'bg-slate-900 hover:bg-slate-800 text-white'
                         }`}
                         onClick={() => setSelectedPlan(index)}
                       >
@@ -320,18 +320,18 @@ Transaction ID: TXN${Date.now()}
                     <div className="space-y-4">
                       <div className={`grid grid-cols-2 gap-4 mb-6 p-4 ${colors.bgLight} rounded-xl border ${colors.border}`}>
                         <div className="text-center">
-                          <div className="text-sm text-gray-500">Maintenance</div>
+                          <div className="text-sm text-slate-500">Maintenance</div>
                           <div className={`font-semibold ${colors.text}`}>{plan.maintenance}</div>
                         </div>
                         <div className="text-center">
-                          <div className="text-sm text-gray-500">Revisions</div>
+                          <div className="text-sm text-slate-500">Revisions</div>
                           <div className={`font-semibold ${colors.text}`}>{plan.revisions}</div>
                         </div>
                       </div>
                       
                       <ul className="space-y-3">
                         {plan.features.map((feature, i) => (
-                          <li key={i} className="flex items-start text-gray-700">
+                          <li key={i} className="flex items-start text-slate-700">
                             <Check className={`w-5 h-5 ${colors.text} mr-3 mt-0.5 flex-shrink-0`} />
                             <span className="text-sm leading-relaxed">{feature}</span>
                           </li>
@@ -348,34 +348,34 @@ Transaction ID: TXN${Date.now()}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden"
+            className="bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden modern-shadow"
           >
             {/* Progress Steps */}
-            <div className="bg-gradient-to-r from-blue-50 via-green-50 to-yellow-50 px-8 py-6 border-b border-gray-100">
+            <div className="bg-gradient-to-r from-blue-50 via-emerald-50 to-amber-50 px-8 py-6 border-b border-slate-100">
               <div className="flex items-center justify-center mb-4">
                 <div className="flex items-center space-x-4">
                   <div className={`flex items-center justify-center w-10 h-10 rounded-full font-semibold ${
                     currentStep === 'form' ? 'bg-blue-600 text-white' : 
-                    currentStep === 'payment' || currentStep === 'processing' ? 'bg-green-500 text-white' : 
-                    'bg-gray-300 text-gray-600'
+                    currentStep === 'payment' || currentStep === 'processing' ? 'bg-emerald-500 text-white' : 
+                    'bg-slate-300 text-slate-600'
                   }`}>
                     1
                   </div>
                   <div className={`w-20 h-1 rounded-full ${
-                    currentStep === 'payment' || currentStep === 'processing' ? 'bg-green-500' : 'bg-gray-300'
+                    currentStep === 'payment' || currentStep === 'processing' ? 'bg-emerald-500' : 'bg-slate-300'
                   }`}></div>
                   <div className={`flex items-center justify-center w-10 h-10 rounded-full font-semibold ${
                     currentStep === 'payment' ? 'bg-blue-600 text-white' : 
-                    currentStep === 'processing' ? 'bg-green-500 text-white' : 
-                    'bg-gray-300 text-gray-600'
+                    currentStep === 'processing' ? 'bg-emerald-500 text-white' : 
+                    'bg-slate-300 text-slate-600'
                   }`}>
                     2
                   </div>
                   <div className={`w-20 h-1 rounded-full ${
-                    currentStep === 'processing' ? 'bg-green-500' : 'bg-gray-300'
+                    currentStep === 'processing' ? 'bg-emerald-500' : 'bg-slate-300'
                   }`}></div>
                   <div className={`flex items-center justify-center w-10 h-10 rounded-full font-semibold ${
-                    currentStep === 'processing' ? 'bg-blue-600 text-white' : 'bg-gray-300 text-gray-600'
+                    currentStep === 'processing' ? 'bg-blue-600 text-white' : 'bg-slate-300 text-slate-600'
                   }`}>
                     3
                   </div>
@@ -383,7 +383,7 @@ Transaction ID: TXN${Date.now()}
               </div>
 
               <div className="text-center">
-                <p className="text-sm font-medium text-gray-600">
+                <p className="text-sm font-medium text-slate-600">
                   {currentStep === 'form' && 'Step 1: Project Details'}
                   {currentStep === 'payment' && 'Step 2: Secure Payment'}
                   {currentStep === 'processing' && 'Step 3: Processing Order'}
@@ -393,7 +393,7 @@ Transaction ID: TXN${Date.now()}
 
             <div className="p-8">
               <div className="flex justify-between items-center mb-8">
-                <h2 className="text-3xl font-bold text-gray-900">
+                <h2 className="text-3xl font-bold text-slate-900">
                   {currentStep === 'form' && 'Project Information'}
                   {currentStep === 'payment' && 'Payment Gateway'}
                   {currentStep === 'processing' && 'Processing Payment'}
@@ -405,7 +405,7 @@ Transaction ID: TXN${Date.now()}
                     setSelectedPlan(null);
                     setCurrentStep('form');
                   }}
-                  className="rounded-full hover:bg-gray-100"
+                  className="rounded-full hover:bg-slate-100"
                 >
                   <X className="w-5 h-5" />
                 </Button>
@@ -419,37 +419,37 @@ Transaction ID: TXN${Date.now()}
                       <div className={`w-12 h-12 bg-gradient-to-r ${getColorClasses(plans[selectedPlan].color).bg} rounded-xl flex items-center justify-center text-white mr-4`}>
                         {plans[selectedPlan].icon}
                       </div>
-                      <h3 className="text-2xl font-bold text-gray-900">{plans[selectedPlan].name} Package</h3>
+                      <h3 className="text-2xl font-bold text-slate-900">{plans[selectedPlan].name} Package</h3>
                     </div>
                     
                     <div className="space-y-6">
                       <div className="flex justify-between items-center p-4 bg-white rounded-xl shadow-sm">
-                        <span className="text-gray-600">Package Price:</span>
+                        <span className="text-slate-600">Package Price:</span>
                         <div className="text-right">
-                          <span className="text-gray-400 line-through text-sm mr-2">{plans[selectedPlan].originalPrice}</span>
+                          <span className="text-slate-400 line-through text-sm mr-2">{plans[selectedPlan].originalPrice}</span>
                           <span className={`text-2xl font-bold ${getColorClasses(plans[selectedPlan].color).text}`}>{plans[selectedPlan].price}</span>
                         </div>
                       </div>
                       
                       <div className="grid grid-cols-2 gap-4">
                         <div className="p-4 bg-white rounded-xl text-center shadow-sm">
-                          <p className="text-sm text-gray-500 mb-1">Maintenance</p>
+                          <p className="text-sm text-slate-500 mb-1">Maintenance</p>
                           <p className={`font-semibold ${getColorClasses(plans[selectedPlan].color).text}`}>{plans[selectedPlan].maintenance}</p>
                         </div>
                         <div className="p-4 bg-white rounded-xl text-center shadow-sm">
-                          <p className="text-sm text-gray-500 mb-1">Revisions</p>
+                          <p className="text-sm text-slate-500 mb-1">Revisions</p>
                           <p className={`font-semibold ${getColorClasses(plans[selectedPlan].color).text}`}>{plans[selectedPlan].revisions}</p>
                         </div>
                       </div>
                     </div>
                     
                     <div className="mt-8">
-                      <h4 className="font-semibold mb-4 text-gray-900">What's Included:</h4>
+                      <h4 className="font-semibold mb-4 text-slate-900">What's Included:</h4>
                       <div className="space-y-2 max-h-64 overflow-y-auto">
                         {plans[selectedPlan].features.map((feature, i) => (
                           <div key={i} className="flex items-start text-sm">
                             <Check className={`w-4 h-4 ${getColorClasses(plans[selectedPlan].color).text} mr-2 mt-0.5 flex-shrink-0`} />
-                            <span className="text-gray-700">{feature}</span>
+                            <span className="text-slate-700">{feature}</span>
                           </div>
                         ))}
                       </div>
@@ -458,10 +458,10 @@ Transaction ID: TXN${Date.now()}
                   
                   {/* Order Form */}
                   <div>
-                    <h3 className="text-2xl font-bold mb-6 text-gray-900">Project Details</h3>
+                    <h3 className="text-2xl font-bold mb-6 text-slate-900">Project Details</h3>
                     <form onSubmit={handleFormSubmit} className="space-y-6">
                       <div>
-                        <label htmlFor="fullName" className="block text-sm font-semibold text-gray-700 mb-2">
+                        <label htmlFor="fullName" className="block text-sm font-semibold text-slate-700 mb-2">
                           Full Name *
                         </label>
                         <input
@@ -470,14 +470,14 @@ Transaction ID: TXN${Date.now()}
                           name="fullName"
                           value={formData.fullName}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                          className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                           placeholder="Your full name"
                           required
                         />
                       </div>
                       
                       <div>
-                        <label htmlFor="whatsapp" className="block text-sm font-semibold text-gray-700 mb-2">
+                        <label htmlFor="whatsapp" className="block text-sm font-semibold text-slate-700 mb-2">
                           WhatsApp Number *
                         </label>
                         <input
@@ -486,14 +486,14 @@ Transaction ID: TXN${Date.now()}
                           name="whatsapp"
                           value={formData.whatsapp}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                          className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                           placeholder="Example: +1234567890"
                           required
                         />
                       </div>
                       
                       <div>
-                        <label htmlFor="businessName" className="block text-sm font-semibold text-gray-700 mb-2">
+                        <label htmlFor="businessName" className="block text-sm font-semibold text-slate-700 mb-2">
                           Business/Company Name *
                         </label>
                         <input
@@ -502,14 +502,14 @@ Transaction ID: TXN${Date.now()}
                           name="businessName"
                           value={formData.businessName}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                          className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                           placeholder="Your business or company name"
                           required
                         />
                       </div>
                       
                       <div>
-                        <label htmlFor="businessType" className="block text-sm font-semibold text-gray-700 mb-2">
+                        <label htmlFor="businessType" className="block text-sm font-semibold text-slate-700 mb-2">
                           Business Type *
                         </label>
                         <select
@@ -517,7 +517,7 @@ Transaction ID: TXN${Date.now()}
                           name="businessType"
                           value={formData.businessType}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                          className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                           required
                         >
                           <option value="" disabled>Select your business type</option>
@@ -528,7 +528,7 @@ Transaction ID: TXN${Date.now()}
                       </div>
                       
                       <div>
-                        <label htmlFor="notes" className="block text-sm font-semibold text-gray-700 mb-2">
+                        <label htmlFor="notes" className="block text-sm font-semibold text-slate-700 mb-2">
                           Additional Notes (Optional)
                         </label>
                         <textarea
@@ -537,7 +537,7 @@ Transaction ID: TXN${Date.now()}
                           value={formData.notes}
                           onChange={handleInputChange}
                           rows={4}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
+                          className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
                           placeholder="Tell us about your specific requirements or questions"
                         ></textarea>
                       </div>
@@ -546,14 +546,14 @@ Transaction ID: TXN${Date.now()}
                         <Button 
                           type="button" 
                           variant="outline" 
-                          className="flex-1 py-3 border-gray-300 hover:bg-gray-50"
+                          className="flex-1 py-3 border-slate-300 hover:bg-slate-50"
                           onClick={() => setSelectedPlan(null)}
                         >
                           Back to Plans
                         </Button>
                         <Button 
                           type="submit" 
-                          className={`flex-1 py-3 bg-gradient-to-r ${getColorClasses(plans[selectedPlan].color).bg} text-white hover:shadow-lg`}
+                          className={`flex-1 py-3 bg-gradient-to-r ${getColorClasses(plans[selectedPlan].color).bg} text-white hover:shadow-lg btn-modern`}
                         >
                           Continue to Payment
                         </Button>
@@ -567,24 +567,24 @@ Transaction ID: TXN${Date.now()}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                   {/* Order Summary */}
                   <div className={`bg-gradient-to-br ${getColorClasses(plans[selectedPlan].color).bgLight} p-8 rounded-2xl border ${getColorClasses(plans[selectedPlan].color).border}`}>
-                    <h3 className="text-2xl font-bold mb-6 text-gray-900">Order Summary</h3>
+                    <h3 className="text-2xl font-bold mb-6 text-slate-900">Order Summary</h3>
                     
                     <div className="space-y-4 mb-8">
                       <div className="flex justify-between items-center p-4 bg-white rounded-xl shadow-sm">
-                        <span className="text-gray-600">Package:</span>
-                        <span className="font-semibold text-gray-900">{plans[selectedPlan].name}</span>
+                        <span className="text-slate-600">Package:</span>
+                        <span className="font-semibold text-slate-900">{plans[selectedPlan].name}</span>
                       </div>
                       <div className="flex justify-between items-center p-4 bg-white rounded-xl shadow-sm">
-                        <span className="text-gray-600">Customer:</span>
-                        <span className="font-semibold text-gray-900">{formData.fullName}</span>
+                        <span className="text-slate-600">Customer:</span>
+                        <span className="font-semibold text-slate-900">{formData.fullName}</span>
                       </div>
                       <div className="flex justify-between items-center p-4 bg-white rounded-xl shadow-sm">
-                        <span className="text-gray-600">Business:</span>
-                        <span className="font-semibold text-gray-900">{formData.businessName}</span>
+                        <span className="text-slate-600">Business:</span>
+                        <span className="font-semibold text-slate-900">{formData.businessName}</span>
                       </div>
-                      <div className="border-t border-gray-200 pt-4">
+                      <div className="border-t border-slate-200 pt-4">
                         <div className="flex justify-between items-center text-xl font-bold">
-                          <span className="text-gray-900">Total Amount:</span>
+                          <span className="text-slate-900">Total Amount:</span>
                           <span className={getColorClasses(plans[selectedPlan].color).text}>{plans[selectedPlan].price}</span>
                         </div>
                       </div>
@@ -605,13 +605,13 @@ Transaction ID: TXN${Date.now()}
                   {/* Payment Form */}
                   <div>
                     <div className="flex items-center mb-6">
-                      <CreditCard className="w-8 h-8 text-gray-700 mr-3" />
-                      <h3 className="text-2xl font-bold text-gray-900">Payment Information</h3>
+                      <CreditCard className="w-8 h-8 text-slate-700 mr-3" />
+                      <h3 className="text-2xl font-bold text-slate-900">Payment Information</h3>
                     </div>
                     
                     <form onSubmit={handlePaymentSubmit} className="space-y-6">
                       <div>
-                        <label htmlFor="cardholderName" className="block text-sm font-semibold text-gray-700 mb-2">
+                        <label htmlFor="cardholderName" className="block text-sm font-semibold text-slate-700 mb-2">
                           Cardholder Name *
                         </label>
                         <input
@@ -620,14 +620,14 @@ Transaction ID: TXN${Date.now()}
                           name="cardholderName"
                           value={paymentData.cardholderName}
                           onChange={handlePaymentInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                          className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                           placeholder="John Doe"
                           required
                         />
                       </div>
 
                       <div>
-                        <label htmlFor="cardNumber" className="block text-sm font-semibold text-gray-700 mb-2">
+                        <label htmlFor="cardNumber" className="block text-sm font-semibold text-slate-700 mb-2">
                           Card Number *
                         </label>
                         <input
@@ -636,7 +636,7 @@ Transaction ID: TXN${Date.now()}
                           name="cardNumber"
                           value={paymentData.cardNumber}
                           onChange={handlePaymentInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                          className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                           placeholder="1234 5678 9012 3456"
                           required
                         />
@@ -644,7 +644,7 @@ Transaction ID: TXN${Date.now()}
 
                       <div className="grid grid-cols-2 gap-4">
                         <div>
-                          <label htmlFor="expiryDate" className="block text-sm font-semibold text-gray-700 mb-2">
+                          <label htmlFor="expiryDate" className="block text-sm font-semibold text-slate-700 mb-2">
                             Expiry Date *
                           </label>
                           <input
@@ -653,13 +653,13 @@ Transaction ID: TXN${Date.now()}
                             name="expiryDate"
                             value={paymentData.expiryDate}
                             onChange={handlePaymentInputChange}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                            className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                             placeholder="MM/YY"
                             required
                           />
                         </div>
                         <div>
-                          <label htmlFor="cvv" className="block text-sm font-semibold text-gray-700 mb-2">
+                          <label htmlFor="cvv" className="block text-sm font-semibold text-slate-700 mb-2">
                             CVV *
                           </label>
                           <input
@@ -668,19 +668,19 @@ Transaction ID: TXN${Date.now()}
                             name="cvv"
                             value={paymentData.cvv}
                             onChange={handlePaymentInputChange}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                            className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                             placeholder="123"
                             required
                           />
                         </div>
                       </div>
 
-                      <div className="bg-yellow-100 p-6 rounded-xl border border-yellow-200">
+                      <div className="bg-amber-100 p-6 rounded-xl border border-amber-200">
                         <div className="flex items-center mb-3">
-                          <Lock className="w-6 h-6 text-yellow-600 mr-3" />
-                          <span className="font-semibold text-yellow-800">Payment Security</span>
+                          <Lock className="w-6 h-6 text-amber-600 mr-3" />
+                          <span className="font-semibold text-amber-800">Payment Security</span>
                         </div>
-                        <p className="text-sm text-yellow-700 leading-relaxed">
+                        <p className="text-sm text-amber-700 leading-relaxed">
                           We accept all major credit cards. Your payment will be processed securely and you'll 
                           receive a confirmation email immediately after successful payment.
                         </p>
@@ -690,14 +690,14 @@ Transaction ID: TXN${Date.now()}
                         <Button 
                           type="button" 
                           variant="outline" 
-                          className="flex-1 py-3 border-gray-300 hover:bg-gray-50"
+                          className="flex-1 py-3 border-slate-300 hover:bg-slate-50"
                           onClick={() => setCurrentStep('form')}
                         >
                           Back to Details
                         </Button>
                         <Button 
                           type="submit" 
-                          className={`flex-1 py-3 bg-gradient-to-r ${getColorClasses(plans[selectedPlan].color).bg} text-white hover:shadow-lg`}
+                          className={`flex-1 py-3 bg-gradient-to-r ${getColorClasses(plans[selectedPlan].color).bg} text-white hover:shadow-lg btn-modern`}
                         >
                           <Lock className="w-4 h-4 mr-2" />
                           Pay {plans[selectedPlan].price}
@@ -711,8 +711,8 @@ Transaction ID: TXN${Date.now()}
               {currentStep === 'processing' && (
                 <div className="text-center py-16">
                   <div className="animate-spin rounded-full h-20 w-20 border-b-4 border-blue-600 mx-auto mb-8"></div>
-                  <h3 className="text-3xl font-bold mb-6 text-gray-900">Processing Your Payment</h3>
-                  <p className="text-lg text-gray-600 mb-8 max-w-md mx-auto leading-relaxed">
+                  <h3 className="text-3xl font-bold mb-6 text-slate-900">Processing Your Payment</h3>
+                  <p className="text-lg text-slate-600 mb-8 max-w-md mx-auto leading-relaxed">
                     Please wait while we securely process your payment. This may take a few moments.
                   </p>
                   <div className="bg-blue-50 p-6 rounded-xl max-w-lg mx-auto border border-blue-200">

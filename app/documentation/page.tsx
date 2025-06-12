@@ -64,28 +64,28 @@ export default function Documentation() {
         hover: 'hover:text-blue-600'
       },
       green: {
-        bg: 'from-green-500 to-green-600',
-        bgLight: 'from-green-50 to-green-100',
-        text: 'text-green-600',
-        border: 'border-green-200',
-        hover: 'hover:text-green-600'
+        bg: 'from-emerald-500 to-emerald-600',
+        bgLight: 'from-emerald-50 to-emerald-100',
+        text: 'text-emerald-600',
+        border: 'border-emerald-200',
+        hover: 'hover:text-emerald-600'
       },
       yellow: {
-        bg: 'from-yellow-500 to-yellow-600',
-        bgLight: 'from-yellow-50 to-yellow-100',
-        text: 'text-yellow-600',
-        border: 'border-yellow-200',
-        hover: 'hover:text-yellow-600'
+        bg: 'from-amber-500 to-amber-600',
+        bgLight: 'from-amber-50 to-amber-100',
+        text: 'text-amber-600',
+        border: 'border-amber-200',
+        hover: 'hover:text-amber-600'
       }
     };
     return colorMap[color as keyof typeof colorMap] || colorMap.blue;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50/30">
+    <div className="min-h-screen professional-gradient">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24">
         <Link href="/">
-          <Button variant="ghost" className="mb-8 text-gray-600 hover:text-blue-600">
+          <Button variant="ghost" className="mb-8 text-slate-600 hover:text-blue-600">
             <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
           </Button>
         </Link>
@@ -96,18 +96,18 @@ export default function Documentation() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-100 via-green-100 to-yellow-100 rounded-full text-sm font-medium text-gray-700 mb-6 border border-blue-200/50">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-100 via-emerald-100 to-amber-100 rounded-full text-sm font-medium text-slate-700 mb-6 border border-blue-200/50 modern-shadow">
             <Sparkles className="w-4 h-4 mr-2 text-blue-500" />
             Comprehensive Documentation
-            <Target className="w-4 h-4 ml-2 text-green-500" />
+            <Target className="w-4 h-4 ml-2 text-emerald-500" />
           </div>
           <h1 className="text-4xl lg:text-6xl font-bold text-gradient mb-6">
             Everything You Need
-            <span className="block bg-gradient-to-r from-blue-600 via-green-600 to-yellow-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-blue-600 via-emerald-600 to-amber-600 bg-clip-text text-transparent">
               to Build with Koderupa
             </span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Comprehensive guides, tutorials, and references to help you master our platform 
             and build exceptional applications.
           </p>
@@ -122,7 +122,7 @@ export default function Documentation() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`bg-white rounded-2xl shadow-xl border ${colors.border} overflow-hidden hover:shadow-2xl transition-all duration-300 group`}
+                className={`bg-white rounded-2xl shadow-xl border ${colors.border} overflow-hidden hover:shadow-2xl transition-all duration-300 group elegant-hover`}
               >
                 <div className={`bg-gradient-to-r ${colors.bg} p-8 text-white`}>
                   <div className="flex items-center mb-4">
@@ -139,14 +139,14 @@ export default function Documentation() {
                     {section.items.map((item, i) => (
                       <li key={i}>
                         <Link href={item.path}>
-                          <div className={`flex items-center justify-between p-4 rounded-xl hover:bg-gray-50 transition-all duration-300 group/item border border-transparent hover:border-gray-200`}>
+                          <div className={`flex items-center justify-between p-4 rounded-xl hover:bg-slate-50 transition-all duration-300 group/item border border-transparent hover:border-slate-200`}>
                             <div>
-                              <h3 className={`font-semibold text-gray-900 group-hover/item:${colors.text} transition-colors`}>
+                              <h3 className={`font-semibold text-slate-900 group-hover/item:${colors.text} transition-colors`}>
                                 {item.name}
                               </h3>
-                              <p className="text-sm text-gray-600">{item.description}</p>
+                              <p className="text-sm text-slate-600">{item.description}</p>
                             </div>
-                            <ArrowRight className={`w-5 h-5 text-gray-400 group-hover/item:${colors.text} group-hover/item:translate-x-1 transition-all duration-300`} />
+                            <ArrowRight className={`w-5 h-5 text-slate-400 group-hover/item:${colors.text} group-hover/item:translate-x-1 transition-all duration-300`} />
                           </div>
                         </Link>
                       </li>
@@ -163,22 +163,22 @@ export default function Documentation() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 rounded-3xl p-12 text-white text-center"
+          className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 rounded-3xl p-12 text-white text-center modern-shadow"
         >
           <h2 className="text-3xl font-bold mb-6">Need Help Getting Started?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
             Our team is here to help you succeed. Get personalized support and guidance 
             for your specific use case.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/get-started">
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-8 py-4 text-lg font-semibold shadow-lg">
+              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white px-8 py-4 text-lg font-semibold shadow-lg btn-modern">
                 <Heart className="w-5 h-5 mr-2" />
                 Contact Support
               </Button>
             </Link>
             <Link href="/documentation/getting-started">
-              <Button variant="outline" size="lg" className="border-gray-400 text-white hover:bg-white/10 px-8 py-4 text-lg font-semibold">
+              <Button variant="outline" size="lg" className="border-slate-400 text-white hover:bg-white/10 px-8 py-4 text-lg font-semibold">
                 <Zap className="w-5 h-5 mr-2" />
                 Quick Start Guide
               </Button>
